@@ -5,17 +5,30 @@
     <title>Sch T&B</title>
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+        MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+                  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+    </script> 
+    
 </head>
 <body>
     <div class="lobby container">
         <h1>Sch T&B</h1>
         <p>스치님의 에디팅 커미션</p>
+        <p>이 페이지는 FHD 해상도에 최적화되어있습니다.</p>
     </div>
     <div class="information container">
         <h2>소개</h2>
         <div>
             <p>완성본 제작 후 합본으로 완성본을 먼저 보내드립니다.</p>
-            <p>국민 241101-04-058968 ㅈㅎㄱ로 입금해주시면 트랙별로 음원을 전송해드립니다.</p>
+            <p>완성본 확인 후 국민 241101-04-058968 ㅈㅎㄱ로 입금해주시면 트랙별로 음원을 전송해드립니다.</p>
 
             <ul>
                 <li>트랙 수 기준</li>
@@ -31,7 +44,8 @@
             <ul>
                 <li>비용</li>
                 <ul>
-                    <li>5 ÷ √(마감기간[일]) × 트랙 수 × 런타임[분] [KRW] (아래에 계산기가 있습니다)</li>
+                    <!-- <li>5 ÷ √(마감기간[일]) × 트랙 수 × 런타임[분] [KRW] (아래에 계산기가 있습니다)</li> -->
+                    <li>$5 \div \sqrt {마감기간[일]} \cdot 트랙 수 \cdot 런타임[분]$ [KRW]</li>
                     <li>위 계산 결과를 백의 자리까지 버림합니다. (23,976 KRW → 23,000 KRW)</li>
                 </ul>
             </ul>
@@ -49,6 +63,12 @@
                     <li>전주, 종주를 계산하지 않고; 간주는 계산합니다.</li>
                 </ul>
             </ul>
+            <ul>
+                <li>피드백</li>
+                <ul>
+                    <li>최대 3회까지, 7일간 피드백을 반영합니다.</li>
+                </ul>
+            </ul>
 
             <h3>스치 T&B 비용 계산기</h3>
             <form>
@@ -61,9 +81,16 @@
         </div>
     </div>
     <div class="sample container">
-        <h2>샘플</h2>
+        <div style="display: block;"><h2>샘플</h2></div>
         <div>
-            준비중입니다.
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/OfK1hmglV8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>유니버스 - 나츠시로 타카아키</p>
+            <p>(Cover. 스치)</p>
+        </div>
+        <div>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/xZ38YtpKgUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>크리스마스 그게 뭐야? 먹는 거야? - 햐다인</p>
+            <p>(Cover. 일홍, 오하나, 서리솜사탕)</p>
         </div>
     </div>
 </body>

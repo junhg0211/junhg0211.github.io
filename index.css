@@ -6,6 +6,9 @@ html {
 body {
     height: 300%;
     margin: 0;
+    background-image: linear-gradient(to right, #ffffff, #fdfdfd);
+    /* color: white; */
+    overflow: hidden;
 }
 
 div.container {
@@ -20,6 +23,11 @@ h2 {
     display: inline-block;
     border-bottom: 1px solid black;
     margin-top: 0;
+}
+
+input, button {
+    border: none;
+    border-bottom: 1px solid gray;
 }
 
 .lobby {
@@ -43,9 +51,14 @@ h2 {
 
 .sample {
     top: 250%;
+    text-align: center;
 }
 
-input, button {
-    border: none;
-    border-bottom: 1px solid gray;
+.sample div {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.sample p {
+    margin: 0;
 }
