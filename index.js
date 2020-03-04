@@ -1,0 +1,35 @@
+var page = 0;
+var phase = 0; // 0: idle, 1: moving down, 2: moving up
+
+var targetY = 0;
+var y = 0;
+
+var frameDurationInMillis = 1000 / 60;
+
+function tick() {
+    targetY = window.innerHeight * page;
+
+    y += (targetY - y) / 20;
+
+    window.scrollTo(0, y);
+}
+
+document.addEventListener("wheel", (event) => {
+    if (event.deltaY > 0) {
+        if (page < 2) {
+            page = page + 1;
+            phase = 1;
+        }
+    } else {
+        if (page > 0) {
+            page = page - 1;
+            phase = 2;
+        }
+    }
+
+    // window.scrollTo(0, 0);
+});
+
+window.addEventListener('scroll', tick);
+
+window.setInterval(tick, frameDurationInMillis);
