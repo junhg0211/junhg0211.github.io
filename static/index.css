@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: "Pretendard", "Noto Sans", sans-serif;
+
+    --theme-color: #19191e;
+    --text-color: #f7f7f9;
+
+    background-color: var(--theme-color);
+    color: var(--text-color);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: auto;
+}
+.content-box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.content {
+    align-self: center;
+}
+
