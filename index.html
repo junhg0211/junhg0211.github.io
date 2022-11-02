@@ -2,7 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello, world!</title>
+    <link rel="icon" type="image/x-icon" href="/res/logo_dark.png">
+    <title>Sch | Hangyeol Jeon</title>
+    <script>
+        const faviconEl = document.querySelector("link[rel='icon']");
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        mediaQuery.addEventListener('change', themeChange);
+
+        function themeChange(event) {
+            if (event.matches) {
+                faviconEl.setAttribute('href', '/res/logo_dark.png');
+            } else {
+                faviconEl.setAttribute('href', '/res/logo_light.png');
+            }
+        }
+
+        window.addEventListener('load', themeChange);
+    </script>
 </head>
 <body>
     <h1>Hello, world!</h1>
