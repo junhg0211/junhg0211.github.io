@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 1440 1440" style="enable-background:new 0 0 1440 1440;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#5E95B4;}
+</style>
+<rect x="0" class="st0" width="1440" height="1440"/>
+<g>
+	<rect x="130.1" y="407.7" class="st1" width="1179.7" height="624.6"/>
+	<g>
+		<polygon class="st2" points="615.9,546.5 615.9,615.9 338.3,615.9 338.3,893.5 268.9,893.5 268.9,546.5 		"/>
+		<polygon class="st2" points="754.7,546.5 754.7,893.5 685.3,893.5 685.3,754.7 407.7,754.7 407.7,685.3 685.3,685.3 685.3,546.5 
+					"/>
+		<rect x="962.9" y="546.5" class="st2" width="69.4" height="208.2"/>
+		<rect x="1101.7" y="546.5" class="st2" width="69.4" height="208.2"/>
+		<polygon class="st2" points="1171.1,824.1 1171.1,893.5 824.1,893.5 824.1,546.5 893.5,546.5 893.5,824.1 		"/>
+		<rect x="407.7" y="824.1" class="st2" width="69.4" height="69.4"/>
+		<path class="st2" d="M130.1,407.7v624.6h1179.7V407.7H130.1z M199.5,962.9V477.1h1040.9v485.8H199.5z"/>
+		<rect x="546.5" y="824.1" class="st2" width="69.4" height="69.4"/>
+	</g>
+</g>
+</svg>

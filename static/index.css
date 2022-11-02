@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: "Pretendard", "Noto Sans", sans-serif;
 
-    --theme-color: #19191e;
+    --theme-color: #2c2c2c;
     --text-color: #f7f7f9;
 
     background-color: var(--theme-color);
@@ -22,5 +22,25 @@ body {
 }
 .content {
     align-self: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
+.social-container {
+    margin-bottom: 2rem;
+}
+.social-box {
+    width: 180px;
+    display: inline-block;
+}
+.social-logo {
+    width: 80px;
+    border-radius: 20px;
+}
+.social-name {
+    margin: 10px 0 8px 0;
+    font-weight: bold;
+}
+.social-profile {
+    margin: 0;
+}
