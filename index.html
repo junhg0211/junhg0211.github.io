@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="/res/logo_dark_square.png">
-    <link rel="stylesheet" href="/static/index.css">
-    <title>Sch | Hangyeol Jeon</title>
-    <script>
-        const faviconEl = document.querySelector("link[rel='icon']");
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/res/logo_dark_square.png">
+  <link rel="stylesheet" href="/static/index.css">
+  <title>Sch | Hangyeol Jeon</title>
+  <script>
+    const faviconEl = document.querySelector("link[rel='icon']");
 
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        mediaQuery.addEventListener('change', themeChange);
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener('change', themeChange);
 
-        function themeChange(event) {
-            if (event.matches) {
-                faviconEl.setAttribute('href', '/res/logo_dark_square.png');
-            } else {
-                faviconEl.setAttribute('href', '/res/logo_light_square.png');
-            }
-        }
+    function themeChange(event) {
+      if (event.matches) {
+        faviconEl.setAttribute('href', '/res/logo_dark_square.png');
+      } else {
+        faviconEl.setAttribute('href', '/res/logo_light_square.png');
+      }
+    }
 
-        window.addEventListener('load', themeChange);
-    </script>
+    window.addEventListener('load', themeChange);
+  </script>
 </head>
 <body>
-    <div>
-        <div class="content-container">
-            <div class="content-box">
-                <div class="content">
-                    <img src="/res/logo_light.png" alt="스치 로고" style="width: 8rem;"/>
-                    <h1>Hangyeol “Sch” JEON</h1>
-                    <p>지식을 갈구하다.</p>
-                </div>
-            </div>
-            <div class="content-box">
-                <div class="content">
-                    <h2>사회연락망</h2>
-                    <div class="social-container">
-                        <div class="social-box">
-                            <img src="/res/image/logo_email.svg" alt="이메일" class="social-logo"/>
-                            <p class="social-name">이메일</p>
-                            <p class="social-profile">junhg0211@gmail.com</p>
-                        </div>
-                        <div class="social-box">
-                            <img src="/res/image/logo_twitter.svg" alt="트위터" class="social-logo"/>
-                            <p class="social-name">트위터</p>
-                            <p class="social-profile">@YtScratch</p>
-                        </div>
-                        <div class="social-box">
-                            <img src="/res/image/logo_github.svg" alt="깃허브" class="social-logo"/>
-                            <p class="social-name">깃허브</p>
-                            <p class="social-profile">junhg0211</p>
-                        </div>
-                        <div class="social-box">
-                            <img src="/res/image/logo_discord.svg" alt="디스코드" class="social-logo"/>
-                            <p class="social-name">디스코드</p>
-                            <p class="social-profile">Sch#0002</p>
-                        </div>
-                    </div>
-                    <div class="social-container">
-                        <div class="social-box">
-                            <img src="/res/image/logo_youtube.svg" alt="유튜브" class="social-logo"/>
-                            <p class="social-name">유튜브</p>
-                            <p class="social-profile">@champemunasong</p>
-                        </div>
-                        <div class="social-box">
-                            <img src="/res/image/logo_sat.svg" alt="사트" class="social-logo"/>
-                            <p class="social-name">사트</p>
-                            <p class="social-profile">Junhg0211</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div>
+    <div class="content-container">
+      <div class="content-box">
+        <div class="content">
+          <img src="/res/logo_light.png" alt="스치 로고" style="width: 8rem;"/>
+          <h1>Hangyeol “Sch” JEON</h1>
+          <p>지식을 갈구하다.</p>
         </div>
+      </div>
+      <div class="content-box">
+        <div class="content">
+          <h2>사회연락망</h2>
+          <div class="social-container">
+            <div class="social-box">
+              <img src="/res/image/logo_email.svg" alt="이메일" class="social-logo"/>
+              <p class="social-name">이메일</p>
+              <p class="social-profile">junhg0211@gmail.com</p>
+            </div>
+            <div class="social-box">
+              <img src="/res/image/logo_twitter.svg" alt="트위터" class="social-logo"/>
+              <p class="social-name">트위터</p>
+              <p class="social-profile">@YtScratch</p>
+            </div>
+            <div class="social-box">
+              <img src="/res/image/logo_github.svg" alt="깃허브" class="social-logo"/>
+              <p class="social-name">깃허브</p>
+              <p class="social-profile">junhg0211</p>
+            </div>
+            <div class="social-box">
+              <img src="/res/image/logo_discord.svg" alt="디스코드" class="social-logo"/>
+              <p class="social-name">디스코드</p>
+              <p class="social-profile">Sch#0002</p>
+            </div>
+          </div>
+          <div class="social-container">
+            <div class="social-box">
+              <img src="/res/image/logo_youtube.svg" alt="유튜브" class="social-logo"/>
+              <p class="social-name">유튜브</p>
+              <p class="social-profile">@champemunasong</p>
+            </div>
+            <div class="social-box">
+              <img src="/res/image/logo_sat.svg" alt="사트" class="social-logo"/>
+              <p class="social-name">사트</p>
+              <p class="social-profile">Junhg0211</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>
