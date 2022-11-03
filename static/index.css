@@ -35,6 +35,7 @@ h3 {
   flex-direction: row;
 }
 .content {
+  transition: all 1s;
   align-self: center;
   margin: 200px 4rem;
 }

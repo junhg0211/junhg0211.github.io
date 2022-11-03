@@ -136,5 +136,21 @@
       </div>
     </div>
   </div>
+  <script charset="utf-8">
+    const observer = new IntersectionObserver(e => {
+      e.forEach(box => {
+        if (box.isIntersecting) {
+          box.target.style.transform = "translate(0, 0)";
+          box.target.style.opacity = 1;
+        } else {
+          box.target.style.transform = "translate(200px, 0)";
+          box.target.style.opacity = 0;
+        }
+      });
+    });
+
+    const boxes = document.querySelectorAll(".content");
+    boxes.forEach(box => observer.observe(box));
+  </script>
 </body>
 </html>
