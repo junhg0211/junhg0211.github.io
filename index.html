@@ -13,9 +13,10 @@
 
     function themeChange(event) {
       if (event.matches) {
-        faviconEl.setAttribute('href', '/res/logo_dark_square.png');
-      } else {
+        // dark mode
         faviconEl.setAttribute('href', '/res/logo_light_square.png');
+      } else {
+        faviconEl.setAttribute('href', '/res/logo_dark_square.png');
       }
     }
 
