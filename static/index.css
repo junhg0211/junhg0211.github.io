@@ -45,6 +45,7 @@ h3 {
 .social-box {
   width: 180px;
   display: inline-block;
+  margin-bottom: 2rem;
 }
 .social-logo {
   width: 80px;
