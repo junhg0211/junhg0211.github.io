@@ -22,8 +22,7 @@ body {
 }
 .content {
   align-self: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin: 200px 4rem;
 }
 
 .social-container {
