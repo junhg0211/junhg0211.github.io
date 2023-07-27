@@ -41,7 +41,7 @@ h3 {
   flex-direction: row;
 }
 .content {
-  transition: all 1s;
+  transition: all 0.5s;
   align-self: center;
   margin: 200px 4rem;
 }
