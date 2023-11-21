@@ -1,9 +1,31 @@
+html {
+    --dark-background-color: #2c2c2c;
+    --dark-color: #f7f7f9;
+
+    --light-background-color: #f7f7f9;
+    --light-color: #2c2c2c;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: var(--dark-background-color);
+        --color: var(--dark-color);
+    }
+}
+
+@media (prefers-color-scheme: light){
+    body {
+        --background-color: var(--light-background-color);
+        --color: var(--light-color);
+    }
+}
+
 body {
   margin: 0;
   font-family: "Pretendard", "Noto Sans", sans-serif;
 
-  --text-color: #2c2c2c;
-  --theme-color: #f7f7f9;
+  --text-color: var(--color);
+  --theme-color: var(--background-color);
 
   background-color: var(--theme-color);
   color: var(--text-color);
