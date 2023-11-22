@@ -11,13 +11,29 @@
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="/static/index.css">
   <title>Sch | Hangyeol Jeon</title>
+  <script>
+    const faviconEl = document.querySelector("link[rel='icon']");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener('change', themeChange);
+
+    function themeChange(event) {
+      if (event.matches) {
+        // dark mode
+        faviconEl.setAttribute('href', '/res/logo_light_square.png');
+      } else {
+        faviconEl.setAttribute('href', '/res/logo_dark_square.png');
+      }
+    }
+
+    window.addEventListener('load', themeChange);
+  </script>
 </head>
 <body>
   <div>
     <div class="content-container">
       <div class="content-box">
         <div class="content">
-          <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem;" class="logo-image"/>
+          <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem;"/>
           <h1>Hangyeol “Sch” Jeon</h1>
           <p>지식을 갈구하다.</p>
         </div>
@@ -268,41 +284,6 @@
 
     const boxes = document.querySelectorAll(".content");
     boxes.forEach(box => observer.observe(box));
-  </script>
-  <script>
-    const faviconEl = document.querySelector("link[rel='icon']");
-    const logoImages = document.querySelectorAll(".logo-image");
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    mediaQuery.addEventListener('change', themeChange);
-
-    function setDarkMode() {
-      faviconEl.setAttribute('href', '/res/logo_light_square.png');
-      logoImages.forEach(element => {
-        element.src = "/res/logo_light.svg";
-      });
-    }
-
-    function setLightMode() {
-      faviconEl.setAttribute('href', '/res/logo_dark_square.png');
-      logoImages.forEach(element => {
-        element.src = "/res/logo_dark.svg";
-      });
-    }
-
-    function themeChange(event) {
-      if (event.matches) {
-        setDarkMode();
-      } else {
-        setLightMode();
-      }
-    }
-
-    let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (isDarkMode) {
-      setDarkMode();
-    } else {
-      setLightMode();
-    }
   </script>
 </body>
 </html>
