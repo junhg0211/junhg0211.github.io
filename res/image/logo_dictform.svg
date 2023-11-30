@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="logo_dictform.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="249.60869"
+     inkscape:cy="271.88256"
+     inkscape:window-width="1651"
+     inkscape:window-height="1085"
+     inkscape:window-x="3989"
+     inkscape:window-y="512"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#2c2c2c;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round"
+       id="rect11690"
+       width="132.29167"
+       height="132.29167"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:86.7182px;text-align:end;letter-spacing:-5.29167px;text-anchor:end;fill:#ffcf00;fill-opacity:1;stroke:none;stroke-width:2.03245;stroke-linecap:round"
+       x="109.103"
+       y="89.966385"
+       id="text5097"><tspan
+         sodipodi:role="line"
+         id="tspan5095"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:86.7182px;font-family:Pretendard;-inkscape-font-specification:'Pretendard Bold';text-align:end;text-anchor:end;fill:#ffcf00;fill-opacity:1;stroke:none;stroke-width:2.03245"
+         x="103.81134"
+         y="89.966385">Df</tspan></text>
+    <rect
+       style="fill:#ffcf00;fill-opacity:1;stroke:none;stroke-width:0.268004;stroke-linecap:round"
+       id="rect10570"
+       width="80.579674"
+       height="12.446525"
+       x="26.914341"
+       y="-107.01894"
+       transform="scale(1,-1)" />
+  </g>
+</svg>
