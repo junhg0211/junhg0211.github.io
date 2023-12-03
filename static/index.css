@@ -34,6 +34,13 @@ h3 {
     font-weight: normal;
 }
 
+.name-decoration {
+    /* color: #ffcf00; */
+    background: linear-gradient(90deg, #ffcf00 10%, #6bd94a 70%, #00cfcf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
