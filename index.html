@@ -29,17 +29,31 @@
   </script>
 </head>
 <body>
+  <div class="navigation" id="navigation" style="transform: translate(0, -100%);">
+    <div class="content-container">
+      <h3>
+        <img src="/res/logo_dark.png" alt="스치 로고" style="height: 0.9rem;"/>
+        Hangyeol Jeon
+      </h3>
+      <ul class="navigation-list">
+        <li><a onclick="smoothScroll('#title-content')">홈</a></li>
+        <li><a onclick="smoothScroll('#shortcut-content')">바로가기</a></li>
+        <li><a onclick="smoothScroll('#introduce-content')">소개</a></li>
+        <li><a onclick="smoothScroll('#contact-content')">연락</a></li>
+      </ul>
+    </div>
+  </div>
   <div>
     <div class="content-container">
       <div class="content-box">
-        <div class="content">
+        <div class="content" id="title-content">
           <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem;"/>
           <h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
           <p>지식을 갈구하다.</p>
         </div>
       </div>
       <div class="context-box">
-        <div class="content">
+        <div class="content" id="shortcut-content">
           <h2>바로가기</h2>
           <div class="social-container">
             <div class="social-box">
@@ -110,7 +124,7 @@
         </div>
       </div>
       <div class="content-box">
-        <div class="content">
+        <div class="content" id="introduce-content">
           <h2>소개</h2>
           <ul>
             <li><strong>2004년 2월 11일</strong> 출생</li>
@@ -202,7 +216,7 @@
         </div>
       </div>
       <div class="content-box">
-        <div class="content">
+        <div class="content" id="contact-content">
           <h2>연락</h2>
           <div class="social-container">
             <div class="social-box">
@@ -327,21 +341,14 @@
       </div>
     </div>
   </div>
-  <script charset="utf-8">
-    const observer = new IntersectionObserver(e => {
-      e.forEach(box => {
-        if (box.isIntersecting) {
-          box.target.style.transform = "";
-          box.target.style.opacity = 1;
-        } else {
-          box.target.style.transform = "translate(100px, 0)";
-          box.target.style.opacity = 0;
-        }
+  <script>
+    function smoothScroll(query){
+      document.querySelector(query).scrollIntoView({
+        behavior: 'smooth'
       });
-    });
-
-    const boxes = document.querySelectorAll(".content");
-    boxes.forEach(box => observer.observe(box));
+    }
   </script>
+  <script src="static/content-animation.js"></script>
+  <script src="static/navigation.js"></script>
 </body>
 </html>
