@@ -1,12 +1,12 @@
 body {
-  margin: 0;
-  font-family: "Pretendard", "Noto Sans", sans-serif;
+    margin: 0;
+    font-family: "Pretendard", "Noto Sans", sans-serif;
 
-  --text-color: #2c2c2c;
-  --theme-color: #f7f7f9;
+    --text-color: #2c2c2c;
+    --theme-color: #f7f7f9;
 
-  background-color: var(--theme-color);
-  color: var(--text-color);
+    background-color: var(--theme-color);
+    color: var(--text-color);
 }
 
 a {
@@ -43,40 +43,40 @@ h3 {
 }
 
 .content-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1280px;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: auto;
 }
 .content-box {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .content {
-  transition: all 0.5s;
-  align-self: center;
-  margin: 200px 4rem;
+    transition: all 0.5s;
+    align-self: center;
+    margin: 200px 4rem;
 }
 
 .social-container {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 .social-box {
-  width: 180px;
-  display: inline-block;
-  margin-bottom: 2rem;
+    width: 180px;
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 .social-logo {
-  width: 80px;
-  border-radius: 20px;
+    width: 80px;
+    border-radius: 20px;
 }
 .social-name {
-  margin: 10px 0 8px 0;
-  font-weight: bold;
+    margin: 10px 0 8px 0;
+    font-weight: bold;
 }
 .social-profile {
-  margin: 0;
+    margin: 0;
 }
