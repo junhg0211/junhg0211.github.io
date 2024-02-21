@@ -37,6 +37,7 @@ h3 {
 .name-decoration {
     /* color: #ffcf00; */
     background: linear-gradient(90deg, #ffcf00 10%, #6bd94a 70%, #00cfcf 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
