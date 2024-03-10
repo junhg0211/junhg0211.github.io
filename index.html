@@ -1,372 +1,627 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="og:title" content='Hangyeol "Sch" Jeon'>
-  <meta name="og:description" content="지식을 갈구하다.">
-  <meta name="og:url" content="https://sch.shtelo.org/">
-  <meta name="og:image" content="/res/logo_dark.png">
-  <meta name="theme-color" content="#fdde59" data-react-helmet="true">
-  <meta name="viewport" content="width=device-width, initial-scale=0.7">
-  <link rel="icon" type="image/x-icon" href="/res/logo_dark_square.png">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="/static/index.css">
-  <title>Sch | Hangyeol Jeon</title>
-  <script>
-    const faviconEl = document.querySelector("link[rel='icon']");
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    mediaQuery.addEventListener('change', themeChange);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="og:title" content='Hangyeol "Sch" Jeon' />
+    <meta name="og:description" content="지식을 갈구하다." />
+    <meta name="og:url" content="https://sch.shtelo.org/" />
+    <meta name="og:image" content="/res/logo_dark.png" />
+    <meta name="theme-color" content="#fdde59" data-react-helmet="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.7" />
+    <link rel="icon" type="image/x-icon" href="/res/logo_dark_square.png" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="/static/index.css" />
+    <title>Sch | Hangyeol Jeon</title>
+    <script>
+      const faviconEl = document.querySelector("link[rel='icon']");
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      mediaQuery.addEventListener("change", themeChange);
 
-    function themeChange(event) {
-      if (event.matches) {
-        // dark mode
-        faviconEl.setAttribute('href', '/res/logo_light_square.png');
-      } else {
-        faviconEl.setAttribute('href', '/res/logo_dark_square.png');
+      function themeChange(event) {
+        if (event.matches) {
+          // dark mode
+          faviconEl.setAttribute("href", "/res/logo_light_square.png");
+        } else {
+          faviconEl.setAttribute("href", "/res/logo_dark_square.png");
+        }
       }
-    }
 
-    window.addEventListener('load', themeChange);
-  </script>
-</head>
-<body>
-  <div class="navigation" id="navigation" style="transform: translate(0, -100%);">
-    <div class="content-container">
-      <h3>
-        <img src="/res/logo_dark.png" alt="스치 로고" style="height: 0.9rem;"/>
-        Hangyeol Jeon
-      </h3>
-      <ul class="navigation-list">
-        <li><a onclick="smoothScroll('#title-content')">홈</a></li>
-        <li><a onclick="smoothScroll('#shortcut-content')">바로가기</a></li>
-        <li><a onclick="smoothScroll('#introduce-content')">소개</a></li>
-        <li><a onclick="smoothScroll('#contact-content')">연락</a></li>
-      </ul>
-    </div>
-  </div>
-  <div>
-    <div class="content-container">
-      <div class="content-box">
-        <div class="content" id="title-content">
-          <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem;"/>
-          <h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
-          <p>지식을 갈구하다.</p>
-        </div>
-      </div>
-      <div class="context-box">
-        <div class="content" id="shortcut-content">
-          <h2>바로가기</h2>
-          <div class="social-container">
-            <div class="social-box">
-              <a href="https://me.shtelo.org/clock" target="_blank">
-                <img src="/res/image/logo_clock.svg" alt="시계" class="social-logo"/>
-              </a>
-              <p class="social-name">Clock</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/notepad" target="_blank">
-                <img src="/res/image/logo_notepad.svg" alt="메모장" class="social-logo"/>
-              </a>
-              <p class="social-name">Notepad</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/candle" target="_blank">
-                <img src="/res/image/logo_candle.svg" alt="양봉 차트 게임" class="social-logo"/>
-              </a>
-              <p class="social-name">Candle</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/roulette" target="_blank">
-                <img src="/res/image/logo_roulette.svg" alt="룰렛" class="social-logo"/>
-              </a>
-              <p class="social-name">Roulette</p>
-            </div>
-            <div class="social-box">
-              <a href="https://liskadia.shtelo.org/" target="_blank">
-                <img src="/res/image/logo_liskadia.svg" alt="리스카디아" class="social-logo"/>
-              </a>
-              <p class="social-name">Liskadia</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/dictform" target="_blank">
-                <img src="/res/image/logo_dictform.svg" alt="Dictform" class="social-logo"/>
-              </a>
-              <p class="social-name">Dictform</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/mahjong-timer" target="_blank">
-                <img src="/res/image/logo_mahjong_timer.svg" alt="Dictform" class="social-logo"/>
-              </a>
-              <p class="social-name">Mahjong Timer</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/tapbpm" target="_blank">
-                <img src="/res/image/logo_tap_bpm.svg" alt="Tap BPM" class="social-logo"/>
-              </a>
-              <p class="social-name">Tap BPM</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/zjyrdl" target="_blank">
-                <img src="/res/image/logo_zjyrdl.svg" alt="Zÿrdl" class="social-logo"/>
-              </a>
-              <p class="social-name">Zÿrdl</p>
-            </div>
-            <div class="social-box">
-              <a href="https://me.shtelo.org/clicks" target="_blank">
-                <img src="/res/image/logo_clicks.svg" alt="Clicks" class="social-logo"/>
-              </a>
-              <p class="social-name">Clicks</p>
-            </div>
-          </div>
-          <h2>디스코드 서버</h2>
-          <div class="social-container">
-            <div class="social-box">
-              <a href="https://discord.com/invite/gVpCgBSPEg" target="_blank">
-                <img src="/res/image/logo_lofanfashasch.svg" alt="로판파샤스 디스코드 서버" class="social-logo"/>
-              </a>
-              <p class="social-name">Lofanfashasch</p>
-              <p class="social-profile">로판파샤스</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-box">
-        <div class="content" id="introduce-content">
-          <h2>소개</h2>
-          <ul>
-            <li><strong>2004년 2월 11일</strong> 출생</li>
-            <li><strong>한국인 &#127472;&#127479;</strong>, 한국 &#127472;&#127479; 거주</li>
-            <li>가능한 언어: <strong>한국어 &#127472;&#127479;</strong>, 일본어 &#127471;&#127477;, 영어 &#127468;&#127463;</li>
-            <li>남성애 범성로맨틱 폴리아모리 시스젠더 남성 (he/him) &#127987;&#8205;&#127752;</li>
-            <li>
-              <a href="https://home.sch.ac.kr/" target="_blank">순천향대학교</a>
-              <a href="https://home.sch.ac.kr/sw/index.jsp" target="_blank">SW융합대학</a>
-              <a href="https://home.sch.ac.kr/computer/index.jsp" target="_blank"><strong>컴퓨터소프트웨어공학과</strong></a>
-              재학
-            </li>
-            <li><strong>소프트웨어 개발자</strong> 지망 &#128104;&#8205;&#128187;</li>
-          </ul>
-          <h2>경험</h2>
-          <h3>학업</h3>
-          <ul>
-            <li><a href="https://home.sch.ac.kr/computer/index.jsp" target="_blank"><b>순천향대학교 컴퓨터소프트웨어공학과</b></a>, 22학번: 22. 3. ~</li>
-          </ul>
-          <h3>프로젝트</h3>
-          <ul>
-            <li>
-              <a href="https://me.shtelo.org/clicks" target="_blank"><b>Clicks</b> 클릭 공유 사이트</a>: 24. 3.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/8brailles" target="_blank"><b>8 Brailles</b> 8점 점자 입력기</a>: 24. 2.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/zjyrdl" target="_blank"><b>Zÿrdl</b> 자소크어 Wordle</a>: 24. 2.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/syntree-svg" target="_blank"><b>Syntree SVG</b> 수형도 트리 SVG화 (오픈소스 기여)</a>: 24. 1.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/tapbpm" target="_blank"><b>Tap BPM</b> 스페이스바를 눌러서 BPM을 측정하는 도구</a>: 23. 12.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/mahjong-timer" target="_blank"><b>Mahjong Timer</b> 마작 플레이 시에 자기 순서 시간 제한을 추가하는 프로그램</a>: 23. 12.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/dictform" target="_blank"><b>Dictform</b> 사전 형태로 단어 의미를 보여주는 템플릿</a>: 23. 11.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/clock" target="_blank"><b>Clock</b> 프로젝터 시계 (리메이크)</a>: 23. 10.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/zajagox-presentation" target="_blank"><b>자야고시 프레젠테이션</b> HTML5를 이용한 보드게임 소개 자료</a>: 23. 7.
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/notepad" target="_blank"><b>Notepad</b> 브라우저에서 사용할 수 있는 큰 텍스트 필드</a>: 23. 1.
-            </li>
-            <li>
-              <a href="https://liskadia.shtelo.org" target="_blank"><b>리스카디아</b>
-              온라인 <a href="http://www.shtelo.org/index.php/%EB%A6%AC%EC%8A%A4%EC%B9%B4%EB%93%9C" target="_blank">리스카드</a> 플레이 웹사이트</a>: 22. 11. ~
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/candle" target="_blank"><b>Candle</b> 보고 있으면 재밌는 양봉 차트</a>: 22. 5.
-            </li>
-            <li>
-              <a href="https://github.com/junhg0211/aice" target="_blank"><b>Aicé</b> Windows에서 사용하는 상용구 프로그램</a>: 21. 11. ~
-            </li>
-            <li>
-              <a href="http://www.shtelo.org/" target="_blank"><b>사트</b> 판타지 공동세계관</a>: 21. 6. ~
-              <ul>
-                <li><a href="https://github.com/Zeli-B/zastravapera" target="_blank"><b>Zastravapera</b> 인공어 사전 디스코드 봇</a>: 22. 2. ~</li>
-              </ul>
-            </li>
-            <li>
-              <a href="https://me.shtelo.org/schboard2" target="_blank"><b>SchBoard</b> 논리 회로 시뮬레이션</a>: 21. 4 ~
-              <ul>
-                <li><a href="https://github.com/junhg0211/schboard2" target="_blank"><b>SchBoard 2</b></a>: 22. 4. ~</li>
-                <li><a href="https://github.com/junhg0211/schboard" target="_blank"><b>SchBoard</b></a>: 21. 4. ~ 21. 8.</li>
-              </ul>
-            </li>
-            <li>
-              <a href="http://sch-clock.kro.kr" target="_blank"><b>sch-clock</b> 프로젝터 시계</a>: 19. 4
-            </li>
-          </ul>
-          <h3>운영 종료 프로젝트</h3>
-          <ul>
-            <li><a href="https://github.com/Zeli-B/goroso-bank" target="_blank"><b>Gaurosseaux</b> 단어 특허 채팅 미니게임</a>: 22. 4. ~ 22. 6.</li>
-          </ul>
-          <h3>단체</h3>
-          <ul>
-            <li><a href="https://blog.naver.com/ieumteo" target="_blank"><b>동탄중앙이음터센터</b></a>, 운영위원회 학생대표: 21. 1. ~ 21. 12.</li>
-            <li><a href="https://lofanfashasch.shtelo.org/" target="_blank"><b>Lofanfashasch</b> School for Avocation</a>, 상사: 21. 7. ~</li>
-            <li>
-              <a href="https://sites.google.com/view/shtelo" target="_blank"><b>Shtelo</b> 회원 모두의 행복한 친목적 인터넷 생활을 보장하기 위한 공간</a>
-              <ul>
-                <li><a href="https://sites.google.com/view/shtelo" target="_blank"><b>Shtelo</b></a> 대표: 18. 7. ~ 19. 1., 20. 1. ~ 20. 7.</li>
-                <li><a href="https://sites.google.com/view/shtelo" target="_blank"><b>Shtelo</b></a> 파트너: 18. 7. ~ 22. 4.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="content-box">
-        <div class="content" id="contact-content">
-          <h2>연락</h2>
-          <div class="social-container">
-            <div class="social-box">
-              <a href="mailto://junhg0211@gmail.com" target="_blank">
-                <img src="/res/image/logo_email.svg" alt="이메일" class="social-logo"/>
-              </a>
-              <p class="social-name">E-Mail</p>
-              <p class="social-profile">junhg0211@gmail.com</p>
-            </div>
-            <div class="social-box">
-              <img src="/res/image/logo_discord.svg" alt="디스코드" class="social-logo"/>
-              <p class="social-name">Discord</p>
-              <p class="social-profile">sch</p>
-            </div>
-          </div>
-          <h3>개인</h3>
-          <div class="social-container">
-            <div class="social-box">
-              <a href="https://youtube.com/@champemunasong" target="_blank">
-                <img src="/res/image/logo_youtube.svg" alt="유튜브" class="social-logo"/>
-              </a>
-              <p class="social-name">YouTube</p>
-              <p class="social-profile">@champemunasong</p>
-            </div>
-            <div class="social-box">
-              <a href="http://www.shtelo.org/index.php/스치" target="_blank">
-                <img src="/res/image/logo_sat.svg" alt="사트" class="social-logo"/>
-              </a>
-              <p class="social-name">사트</p>
-              <p class="social-profile">Junhg0211</p>
-            </div>
-            <div class="social-box">
-                <img src="/res/image/logo_twitter.svg" alt="트위터" class="social-logo"/>
-              </a>
-              <p class="social-name">Twitter/X</p>
-              <p class="social-profile">@champemunasong</p>
-            </div>
-            <div class="social-box">
-              <a href="https://github.com/junhg0211" target="_blank">
-                <img src="/res/image/logo_github.svg" alt="깃허브" class="social-logo"/>
-              </a>
-              <p class="social-name">GitHub</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <a href="https://velog.io/@junhg0211" target="_blank">
-                <img src="/res/image/logo_velog.svg" alt="벨로그" class="social-logo"/>
-              </a>
-              <p class="social-name">Velog</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <a href="https://www.acmicpc.net/user/junhg0211" target="_blank">
-                <img src="/res/image/logo_boj.svg" alt="백준 온라인 저지" class="social-logo"/>
-              </a>
-              <p class="social-name">BOJ</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <a href="https://solved.ac/profile/junhg0211" target="_blank">
-                <img src="/res/image/logo_solvedac.svg" alt="solved.ac" class="social-logo"/>
-              </a>
-              <p class="social-name">Solved.ac</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <a href="https://staging.bsky.app/profile/sch.shtelo.org" target="_blank">
-                <img src="/res/image/logo_bluesky.svg" alt="bluesky" class="social-logo"/>
-              </a>
-              <p class="social-name">Bluesky</p>
-              <p class="social-profile">@sch.shtelo.org</p>
-            </div>
-          </div>
-          <h3>게임</h3>
-          <div class="social-container">
-            <div class="social-box">
-              <a href="https://vrchat.com/home/user/usr_e453d2e4-e89d-4571-b5f9-4b5529e85504" target="_blank">
-                <img src="/res/image/logo_vrchat.svg" alt="VRChat" class="social-logo"/>
-              </a>
-              <p class="social-name">VRChat</p>
-              <p class="social-profile">Suchi_</p>
-            </div>
-            <div class="social-box">
-              <a href="https://osu.ppy.sh/users/5564867" target="_blank">
-                <img src="/res/image/logo_osu.svg" alt="osu!" class="social-logo"/>
-              </a>
-              <p class="social-name">osu!</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <img src="/res/image/logo_minecraft.svg" alt="마인크래프트" class="social-logo"/>
-              <p class="social-name">Minecraft</p>
-              <p class="social-profile">Sch__</p>
-            </div>
-            <div class="social-box">
-              <a href="https://steamcommunity.com/id/junhg0211" target="_blank">
-                <img src="/res/image/logo_steam.svg" alt="스팀" class="social-logo"/>
-              </a>
-              <p class="social-name">Steam</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <a href="https://liskadia.shtelo.org/profile/junhg0211" target="_blank">
-                <img src="/res/image/logo_liskadia.svg" alt="liskadia" class="social-logo"/>
-              </a>
-              <p class="social-name">Liskadia</p>
-              <p class="social-profile">junhg0211</p>
-            </div>
-            <div class="social-box">
-              <img src="/res/image/logo_mahjong_soul.jpg" alt="mahjong soul" class="social-logo"/>
-              <p class="social-name">Mahjong Soul</p>
-              <p class="social-profile">スチー<br>83440326</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="content">
-          <p>
-            이 사이트는 Suhyun Park님의 <a href="https://shiftpsh.com/">shiftpsh.com</a> 사이트의
-            디자인을 참고하여 제작하였습니다.
-          </p>
-          <p>
-            이 사이트에 대한 코드는 <a href="https://github.com/junhg0211/junhg0211.github.io">이 GitHub 링크</a>를 눌러 확인해볼 수 있습니다.
-          </p>
-        </div>
+      window.addEventListener("load", themeChange);
+    </script>
+  </head>
+  <body>
+    <div
+      class="navigation"
+      id="navigation"
+      style="transform: translate(0, -100%)"
+    >
+      <div class="content-container">
+        <h3>
+          <img
+            src="/res/logo_dark.png"
+            alt="스치 로고"
+            style="height: 0.9rem"
+          />
+          Hangyeol Jeon
+        </h3>
+        <ul class="navigation-list">
+          <li><a onclick="smoothScroll('#title-content')">홈</a></li>
+          <li><a onclick="smoothScroll('#shortcut-content')">바로가기</a></li>
+          <li><a onclick="smoothScroll('#introduce-content')">소개</a></li>
+          <li><a onclick="smoothScroll('#contact-content')">연락</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-  <script>
-    function smoothScroll(query){
-      document.querySelector(query).scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  </script>
-  <script src="static/content-animation.js"></script>
-  <script src="static/navigation.js"></script>
-</body>
+    <div>
+      <div class="content-container">
+        <div class="content-box">
+          <div class="content" id="title-content">
+            <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem" />
+            <h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
+            <p>지식을 갈구하다.</p>
+          </div>
+        </div>
+        <div class="context-box">
+          <div class="content" id="shortcut-content">
+            <h2>바로가기</h2>
+            <div class="social-container">
+              <div class="social-box">
+                <a href="https://me.shtelo.org/clock" target="_blank">
+                  <img
+                    src="/res/image/logo_clock.svg"
+                    alt="시계"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Clock</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/notepad" target="_blank">
+                  <img
+                    src="/res/image/logo_notepad.svg"
+                    alt="메모장"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Notepad</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/candle" target="_blank">
+                  <img
+                    src="/res/image/logo_candle.svg"
+                    alt="양봉 차트 게임"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Candle</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/roulette" target="_blank">
+                  <img
+                    src="/res/image/logo_roulette.svg"
+                    alt="룰렛"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Roulette</p>
+              </div>
+              <div class="social-box">
+                <a href="https://liskadia.shtelo.org/" target="_blank">
+                  <img
+                    src="/res/image/logo_liskadia.svg"
+                    alt="리스카디아"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Liskadia</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/dictform" target="_blank">
+                  <img
+                    src="/res/image/logo_dictform.svg"
+                    alt="Dictform"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Dictform</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/mahjong-timer" target="_blank">
+                  <img
+                    src="/res/image/logo_mahjong_timer.svg"
+                    alt="Dictform"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Mahjong Timer</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/tapbpm" target="_blank">
+                  <img
+                    src="/res/image/logo_tap_bpm.svg"
+                    alt="Tap BPM"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Tap BPM</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/zjyrdl" target="_blank">
+                  <img
+                    src="/res/image/logo_zjyrdl.svg"
+                    alt="Zÿrdl"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Zÿrdl</p>
+              </div>
+              <div class="social-box">
+                <a href="https://me.shtelo.org/clicks" target="_blank">
+                  <img
+                    src="/res/image/logo_clicks.svg"
+                    alt="Clicks"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Clicks</p>
+              </div>
+            </div>
+            <h2>디스코드 서버</h2>
+            <div class="social-container">
+              <div class="social-box">
+                <a href="https://discord.com/invite/gVpCgBSPEg" target="_blank">
+                  <img
+                    src="/res/image/logo_lofanfashasch.svg"
+                    alt="로판파샤스 디스코드 서버"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Lofanfashasch</p>
+                <p class="social-profile">로판파샤스</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="content" id="introduce-content">
+            <h2>소개</h2>
+            <ul>
+              <li><strong>2004년 2월 11일</strong> 출생</li>
+              <li>
+                <strong>한국인 &#127472;&#127479;</strong>, 한국
+                &#127472;&#127479; 거주
+              </li>
+              <li>
+                가능한 언어: <strong>한국어 &#127472;&#127479;</strong>, 일본어
+                &#127471;&#127477;, 영어 &#127468;&#127463;
+              </li>
+              <li>
+                남성애 범성로맨틱 폴리아모리 시스젠더 남성 (he/him)
+                &#127987;&#8205;&#127752;
+              </li>
+              <li>
+                <a href="https://home.sch.ac.kr/" target="_blank"
+                  >순천향대학교</a
+                >
+                <a href="https://home.sch.ac.kr/sw/index.jsp" target="_blank"
+                  >SW융합대학</a
+                >
+                <a
+                  href="https://home.sch.ac.kr/computer/index.jsp"
+                  target="_blank"
+                  ><strong>컴퓨터소프트웨어공학과</strong></a
+                >
+                재학
+              </li>
+              <li>
+                <strong>소프트웨어 개발자</strong> 지망
+                &#128104;&#8205;&#128187;
+              </li>
+            </ul>
+            <h2>경험</h2>
+            <h3>학업</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://home.sch.ac.kr/computer/index.jsp"
+                  target="_blank"
+                  ><b>순천향대학교 컴퓨터소프트웨어공학과</b></a
+                >, 22학번: 22. 3. ~
+              </li>
+            </ul>
+            <h3>프로젝트</h3>
+            <ul>
+              <li>
+                <a href="https://me.shtelo.org/clicks" target="_blank"
+                  ><b>Clicks</b> 클릭 공유 사이트</a
+                >: 24. 3.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/8brailles" target="_blank"
+                  ><b>8 Brailles</b> 8점 점자 입력기</a
+                >: 24. 2.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/zjyrdl" target="_blank"
+                  ><b>Zÿrdl</b> 자소크어 Wordle</a
+                >: 24. 2.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/syntree-svg" target="_blank"
+                  ><b>Syntree SVG</b> 수형도 트리 SVG화 (오픈소스 기여)</a
+                >: 24. 1.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/tapbpm" target="_blank"
+                  ><b>Tap BPM</b> 스페이스바를 눌러서 BPM을 측정하는 도구</a
+                >: 23. 12.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/mahjong-timer" target="_blank"
+                  ><b>Mahjong Timer</b> 마작 플레이 시에 자기 순서 시간 제한을
+                  추가하는 프로그램</a
+                >: 23. 12.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/dictform" target="_blank"
+                  ><b>Dictform</b> 사전 형태로 단어 의미를 보여주는 템플릿</a
+                >: 23. 11.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/clock" target="_blank"
+                  ><b>Clock</b> 프로젝터 시계 (리메이크)</a
+                >: 23. 10.
+              </li>
+              <li>
+                <a
+                  href="https://me.shtelo.org/zajagox-presentation"
+                  target="_blank"
+                  ><b>자야고시 프레젠테이션</b> HTML5를 이용한 보드게임 소개
+                  자료</a
+                >: 23. 7.
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/notepad" target="_blank"
+                  ><b>Notepad</b> 브라우저에서 사용할 수 있는 큰 텍스트 필드</a
+                >: 23. 1.
+              </li>
+              <li>
+                <a href="https://liskadia.shtelo.org" target="_blank"
+                  ><b>리스카디아</b> 온라인
+                  <a
+                    href="http://www.shtelo.org/index.php/%EB%A6%AC%EC%8A%A4%EC%B9%B4%EB%93%9C"
+                    target="_blank"
+                    >리스카드</a
+                  >
+                  플레이 웹사이트</a
+                >: 22. 11. ~
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/candle" target="_blank"
+                  ><b>Candle</b> 보고 있으면 재밌는 양봉 차트</a
+                >: 22. 5.
+              </li>
+              <li>
+                <a href="https://github.com/junhg0211/aice" target="_blank"
+                  ><b>Aicé</b> Windows에서 사용하는 상용구 프로그램</a
+                >: 21. 11. ~
+              </li>
+              <li>
+                <a href="http://www.shtelo.org/" target="_blank"
+                  ><b>사트</b> 판타지 공동세계관</a
+                >: 21. 6. ~
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/Zeli-B/zastravapera"
+                      target="_blank"
+                      ><b>Zastravapera</b> 인공어 사전 디스코드 봇</a
+                    >: 22. 2. ~
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://me.shtelo.org/schboard2" target="_blank"
+                  ><b>SchBoard</b> 논리 회로 시뮬레이션</a
+                >: 21. 4 ~
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/junhg0211/schboard2"
+                      target="_blank"
+                      ><b>SchBoard 2</b></a
+                    >: 22. 4. ~
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/junhg0211/schboard"
+                      target="_blank"
+                      ><b>SchBoard</b></a
+                    >: 21. 4. ~ 21. 8.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="http://sch-clock.kro.kr" target="_blank"
+                  ><b>sch-clock</b> 프로젝터 시계</a
+                >: 19. 4
+              </li>
+            </ul>
+            <h3>운영 종료 프로젝트</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/Zeli-B/goroso-bank" target="_blank"
+                  ><b>Gaurosseaux</b> 단어 특허 채팅 미니게임</a
+                >: 22. 4. ~ 22. 6.
+              </li>
+            </ul>
+            <h3>단체</h3>
+            <ul>
+              <li>
+                <a href="https://blog.naver.com/ieumteo" target="_blank"
+                  ><b>동탄중앙이음터센터</b></a
+                >, 운영위원회 학생대표: 21. 1. ~ 21. 12.
+              </li>
+              <li>
+                <a href="https://lofanfashasch.shtelo.org/" target="_blank"
+                  ><b>Lofanfashasch</b> School for Avocation</a
+                >, 상사: 21. 7. ~
+              </li>
+              <li>
+                <a href="https://sites.google.com/view/shtelo" target="_blank"
+                  ><b>Shtelo</b> 회원 모두의 행복한 친목적 인터넷 생활을
+                  보장하기 위한 공간</a
+                >
+                <ul>
+                  <li>
+                    <a
+                      href="https://sites.google.com/view/shtelo"
+                      target="_blank"
+                      ><b>Shtelo</b></a
+                    >
+                    대표: 18. 7. ~ 19. 1., 20. 1. ~ 20. 7.
+                  </li>
+                  <li>
+                    <a
+                      href="https://sites.google.com/view/shtelo"
+                      target="_blank"
+                      ><b>Shtelo</b></a
+                    >
+                    파트너: 18. 7. ~ 22. 4.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="content" id="contact-content">
+            <h2>연락</h2>
+            <div class="social-container">
+              <div class="social-box">
+                <a href="mailto://junhg0211@gmail.com" target="_blank">
+                  <img
+                    src="/res/image/logo_email.svg"
+                    alt="이메일"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">E-Mail</p>
+                <p class="social-profile">junhg0211@gmail.com</p>
+              </div>
+              <div class="social-box">
+                <img
+                  src="/res/image/logo_discord.svg"
+                  alt="디스코드"
+                  class="social-logo"
+                />
+                <p class="social-name">Discord</p>
+                <p class="social-profile">sch</p>
+              </div>
+            </div>
+            <h3>개인</h3>
+            <div class="social-container">
+              <div class="social-box">
+                <a href="https://youtube.com/@champemunasong" target="_blank">
+                  <img
+                    src="/res/image/logo_youtube.svg"
+                    alt="유튜브"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">YouTube</p>
+                <p class="social-profile">@champemunasong</p>
+              </div>
+              <div class="social-box">
+                <a href="http://www.shtelo.org/index.php/스치" target="_blank">
+                  <img
+                    src="/res/image/logo_sat.svg"
+                    alt="사트"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">사트</p>
+                <p class="social-profile">Junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a href="https://twitter.com/5cheropoenuiZ">
+                  <img
+                    src="/res/image/logo_twitter.svg"
+                    alt="트위터"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Twitter/X</p>
+                <p class="social-profile">@5cheropoenuiZ</p>
+              </div>
+              <div class="social-box">
+                <a href="https://github.com/junhg0211" target="_blank">
+                  <img
+                    src="/res/image/logo_github.svg"
+                    alt="깃허브"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">GitHub</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a href="https://velog.io/@junhg0211" target="_blank">
+                  <img
+                    src="/res/image/logo_velog.svg"
+                    alt="벨로그"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Velog</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a
+                  href="https://www.acmicpc.net/user/junhg0211"
+                  target="_blank"
+                >
+                  <img
+                    src="/res/image/logo_boj.svg"
+                    alt="백준 온라인 저지"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">BOJ</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a href="https://solved.ac/profile/junhg0211" target="_blank">
+                  <img
+                    src="/res/image/logo_solvedac.svg"
+                    alt="solved.ac"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Solved.ac</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a
+                  href="https://staging.bsky.app/profile/sch.shtelo.org"
+                  target="_blank"
+                >
+                  <img
+                    src="/res/image/logo_bluesky.svg"
+                    alt="bluesky"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Bluesky</p>
+                <p class="social-profile">@sch.shtelo.org</p>
+              </div>
+            </div>
+            <h3>게임</h3>
+            <div class="social-container">
+              <div class="social-box">
+                <a
+                  href="https://vrchat.com/home/user/usr_e453d2e4-e89d-4571-b5f9-4b5529e85504"
+                  target="_blank"
+                >
+                  <img
+                    src="/res/image/logo_vrchat.svg"
+                    alt="VRChat"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">VRChat</p>
+                <p class="social-profile">Suchi_</p>
+              </div>
+              <div class="social-box">
+                <a href="https://osu.ppy.sh/users/5564867" target="_blank">
+                  <img
+                    src="/res/image/logo_osu.svg"
+                    alt="osu!"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">osu!</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <img
+                  src="/res/image/logo_minecraft.svg"
+                  alt="마인크래프트"
+                  class="social-logo"
+                />
+                <p class="social-name">Minecraft</p>
+                <p class="social-profile">Sch__</p>
+              </div>
+              <div class="social-box">
+                <a
+                  href="https://steamcommunity.com/id/junhg0211"
+                  target="_blank"
+                >
+                  <img
+                    src="/res/image/logo_steam.svg"
+                    alt="스팀"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Steam</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <a
+                  href="https://liskadia.shtelo.org/profile/junhg0211"
+                  target="_blank"
+                >
+                  <img
+                    src="/res/image/logo_liskadia.svg"
+                    alt="liskadia"
+                    class="social-logo"
+                  />
+                </a>
+                <p class="social-name">Liskadia</p>
+                <p class="social-profile">junhg0211</p>
+              </div>
+              <div class="social-box">
+                <img
+                  src="/res/image/logo_mahjong_soul.jpg"
+                  alt="mahjong soul"
+                  class="social-logo"
+                />
+                <p class="social-name">Mahjong Soul</p>
+                <p class="social-profile">スチー<br />83440326</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="content">
+            <p>
+              이 사이트는 Suhyun Park님의
+              <a href="https://shiftpsh.com/">shiftpsh.com</a> 사이트의 디자인을
+              참고하여 제작하였습니다.
+            </p>
+            <p>
+              이 사이트에 대한 코드는
+              <a href="https://github.com/junhg0211/junhg0211.github.io"
+                >이 GitHub 링크</a
+              >를 눌러 확인해볼 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function smoothScroll(query) {
+        document.querySelector(query).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <script src="static/content-animation.js"></script>
+    <script src="static/navigation.js"></script>
+  </body>
 </html>
