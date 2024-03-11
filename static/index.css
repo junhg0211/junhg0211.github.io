@@ -76,8 +76,9 @@ h3 {
 .content-container {
   display: flex;
   flex-direction: column;
-  max-width: 960px;
+  max-width: calc(960px - 4rem);
   margin: auto;
+  padding: 0 2rem;
 }
 .content-box {
   min-height: 100vh;
