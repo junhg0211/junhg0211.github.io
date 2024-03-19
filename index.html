@@ -50,24 +50,24 @@
           Hangyeol Jeon
         </h3>
         <ul class="navigation-list">
-          <li><a onclick="smoothScroll('#title-content')">홈</a></li>
-          <li><a onclick="smoothScroll('#shortcut-content')">바로가기</a></li>
-          <li><a onclick="smoothScroll('#introduce-content')">소개</a></li>
-          <li><a onclick="smoothScroll('#contact-content')">연락</a></li>
+          <li><a onclick="smoothScroll('#title-container')">홈</a></li>
+          <li><a onclick="smoothScroll('#shortcut-container')">바로가기</a></li>
+          <li><a onclick="smoothScroll('#introduce-container')">소개</a></li>
+          <li><a onclick="smoothScroll('#contact-container')">연락</a></li>
         </ul>
       </div>
     </div>
     <div>
       <div class="content-container">
-        <div class="content-box">
+        <div class="content-box" id="title-container">
           <div class="content" id="title-content">
             <img src="/res/logo_dark.png" alt="스치 로고" style="width: 8rem" />
             <h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
             <p>지식을 갈구하다.</p>
           </div>
         </div>
-        <div class="context-box">
-          <div class="content" id="shortcut-content">
+        <div class="context-box" id="shortcut-container">
+          <div class="content">
             <h2>바로가기</h2>
             <div class="social-container">
               <div class="social-box">
@@ -187,8 +187,8 @@
             </div>
           </div>
         </div>
-        <div class="content-box">
-          <div class="content" id="introduce-content">
+        <div class="content-box" id="introduce-container">
+          <div class="content">
             <h2>소개</h2>
             <ul>
               <li><strong>2004년 2월 11일</strong> 출생</li>
@@ -399,8 +399,8 @@
             </ul>
           </div>
         </div>
-        <div class="content-box">
-          <div class="content" id="contact-content">
+        <div class="content-box" id="contact-container">
+          <div class="content">
             <h2>연락</h2>
             <div class="social-container">
               <div class="social-box">
