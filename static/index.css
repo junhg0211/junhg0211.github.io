@@ -1,114 +1,44 @@
 body {
-  margin: 0;
-  font-family: "Pretendard", "Noto Sans", sans-serif;
+	margin: 0;
+	font-family: 'Pretendard', 'Noto Sans', sans-serif;
 
-  --text-color: #2c2c2c;
-  --theme-color: #f7f7f9;
+	--text-color: #2c2c2c;
+	--theme-color: #f7f7f9;
 
-  background-color: var(--theme-color);
-  color: var(--text-color);
+	background-color: var(--theme-color);
+	color: var(--text-color);
 }
 
 a {
-  color: var(--text-color);
-  text-decoration: none;
-  cursor: pointer;
+	color: var(--text-color);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 a:hover {
-  text-decoration: dashed underline;
+	text-decoration: dashed underline;
 }
 
 ul {
-  list-style: square;
+	list-style: square;
 }
 
 li {
-  line-height: 2rem;
+	line-height: 2rem;
 }
 
 h2 {
-  margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 h3 {
-  font-weight: normal;
-}
-
-.navigation {
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(247, 247, 249, 1) 40%,
-    rgba(0, 0, 0, 0) 100%
-  );
-
-  transition: all 0.5s;
-}
-
-.navigation .content-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.navigation-list {
-  list-style-type: none;
-  display: inline-block;
-  flex: 1;
-  text-align: right;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 2rem;
-}
-
-.name-decoration {
-  /* color: #ffcf00; */
-  background: linear-gradient(90deg, #ffcf00 10%, #6bd94a 70%, #00cfcf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	font-weight: normal;
 }
 
 .content-container {
-  display: flex;
-  flex-direction: column;
-  max-width: calc(960px - 4rem);
-  margin: auto;
-  padding: 0 2rem;
-}
-.content-box {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.content {
-  transition: all 0.5s;
-  align-self: center;
-  margin: 200px 0;
-}
-
-.social-container {
-  margin-bottom: 2rem;
-}
-.social-box {
-  width: 180px;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-.social-logo {
-  width: 80px;
-  border-radius: 20px;
-}
-.social-name {
-  margin: 10px 0 8px 0;
-  font-weight: bold;
-}
-.social-profile {
-  margin: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: calc(960px - 4rem);
+	margin: auto;
+	padding: 0 2rem;
 }

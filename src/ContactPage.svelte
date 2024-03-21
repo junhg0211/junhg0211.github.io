@@ -1,0 +1,120 @@
+<script>
+	import SocialContainer from './SocialContainer.svelte';
+	import SocialBox from './SocialBox.svelte';
+</script>
+
+<h2>연락</h2>
+<SocialContainer>
+	<SocialBox
+		href="mailto://junhg0211@gmail.com"
+		src="/image/logo_email.svg"
+		alt="이메일"
+		name="E-Mail"
+		profile="junhg0211@gmail.com"
+	/>
+	<SocialBox src="/image/logo_discord.svg" alt="디스코드" name="Discord" profile="sch" />
+</SocialContainer>
+<h3>개인</h3>
+<SocialContainer>
+	<SocialBox
+		href="https://youtube.com/@champemunasong"
+		src="/image/logo_youtube.svg"
+		alt="유튜브"
+		name="YouTube"
+		profile="@champemunasong"
+	/>
+	<SocialBox
+		href="http://www.shtelo.org/index.php/스치"
+		src="/image/logo_sat.svg"
+		alt="사트"
+		name="사트"
+		profile="Junhg0211"
+	/>
+	<SocialBox
+		href="https://twitter.com/5cheropoenuiZ"
+		src="/image/logo_twitter.svg"
+		alt="트위터"
+		name="Twitter/X"
+		profile="@5cheropoenuiZ"
+	/>
+	<SocialBox
+		href="https://github.com/junhg0211"
+		src="/image/logo_github.svg"
+		alt="깃허브"
+		name="GitHub"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		href="https://velog.io/@junhg0211"
+		src="/image/logo_velog.svg"
+		alt="벨로그"
+		name="Velog"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		href="https://www.acmicpc.net/user/junhg0211"
+		src="/image/logo_boj.svg"
+		alt="백준"
+		온라인
+		저지
+		name="BOJ"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		href="https://solved.ac/profile/junhg0211"
+		src="/image/logo_solvedac.svg"
+		alt="solved.ac"
+		name="Solved.ac"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		href="https://staging.bsky.app/profile/sch.shtelo.org"
+		src="/image/logo_bluesky.svg"
+		alt="bluesky"
+		name="Bluesky"
+		profile="@sch.shtelo.org"
+	/></SocialContainer
+>
+<h3>게임</h3>
+<SocialContainer>
+	<SocialBox
+		href="https://vrchat.com/home/user/usr_e453d2e4-e89d-4571-b5f9-4b5529e85504"
+		src="/image/logo_vrchat.svg"
+		alt="VRChat"
+		name="VRChat"
+		profile="Suchi_"
+	/>
+	<SocialBox
+		href="https://osu.ppy.sh/users/5564867"
+		src="/image/logo_osu.svg"
+		alt="osu!"
+		name="osu!"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		src="/image/logo_minecraft.svg"
+		alt="마인크래프트"
+		name="Minecraft"
+		profile="Sch__"
+	/>
+	<SocialBox
+		href="https://steamcommunity.com/id/junhg0211"
+		src="/image/logo_steam.svg"
+		alt="스팀"
+		name="Steam"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		href="https://liskadia.shtelo.org/profile/junhg0211"
+		src="/image/logo_liskadia.svg"
+		alt="liskadia"
+		name="Liskadia"
+		profile="junhg0211"
+	/>
+	<SocialBox
+		src="/image/logo_mahjong_soul.jpg"
+		alt="Mahjong Soul"
+		name="Mahjong Soul"
+    profile="スチー #83440326"
+	/>
+</SocialContainer>
