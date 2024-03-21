@@ -23,22 +23,6 @@
 	/>
 	<link rel="stylesheet" href="/index.css" />
 	<title>Sch | Hangyeol Jeon</title>
-	<script>
-		const faviconEl = document.querySelector("link[rel='icon']");
-		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-		mediaQuery.addEventListener('change', themeChange);
-
-		function themeChange(event) {
-			if (event.matches) {
-				// dark mode
-				faviconEl.setAttribute('href', '/logo/logo_light_square.png');
-			} else {
-				faviconEl.setAttribute('href', '/logo/logo_dark_square.png');
-			}
-		}
-
-		window.addEventListener('load', themeChange);
-	</script>
   <script src="/js/navigation.js"></script>
   <script src="/js/content-animation.js"></script>
 </svelte:head>
