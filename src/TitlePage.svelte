@@ -1,4 +1,4 @@
-<img src="/logo/logo_dark.png" alt="스치 로고" style="width: 8rem" />
+<img src="./logo/logo_dark.png" alt="스치 로고" style="width: 8rem" />
 <h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
 <p>지식을 갈구하다.</p>
 

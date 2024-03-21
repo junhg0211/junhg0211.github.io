@@ -9,7 +9,7 @@
 <div class="navigation" id="navigation" style="transform: translate(0, -100%)">
 	<div class="content-container">
 		<h3>
-			<img src="/logo/logo_dark.png" alt="스치 로고" style="height: 0.9rem" />
+			<img src="./logo/logo_dark.png" alt="스치 로고" style="height: 0.9rem" />
 			Hangyeol Jeon
 		</h3>
 		<ul class="navigation-list">
