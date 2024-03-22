@@ -70,7 +70,7 @@
 	<ListItem
 		href="https://me.shtelo.org/mahjong-timer"
 		name="Mahjong Timer"
-    description="마작 플레이 시에 자기 순서 시간 제한을 추가하는 프로그램"
+    description="마작 턴 타이머"
     date="23. 12."
 	></ListItem>
 	<ListItem
