@@ -48,7 +48,7 @@
 		name="Mahjong Timer"
 	/>
 	<SocialBox
-		href="https://me.shtelo.org/tap-bpm"
+		href="https://me.shtelo.org/tapbpm"
 		src="./image/logo_tap_bpm.svg"
 		at="Tap BPM"
 		name="Tap BPM"
