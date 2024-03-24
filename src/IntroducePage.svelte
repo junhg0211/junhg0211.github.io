@@ -44,6 +44,12 @@
     date="24. 3."
 	></ListItem>
 	<ListItem
+		href="https://github.com/junhg0211/enging"
+		name="Enging"
+    description="VVVF 오디오 시뮬레이션"
+    date="24. 2."
+	></ListItem>
+	<ListItem
 		href="https://me.shtelo.org/8brailles"
 		name="8 Brailles"
     description="8점 점자 입력기"
@@ -84,6 +90,12 @@
 		name="Clock"
     description="프로젝터 시계 (리메이크)"
     date="23. 10."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/manual-transmission"
+		name="Manual Transmission"
+    description="수동변속기 시뮬레이션"
+    date="23. 8."
 	></ListItem>
 	<ListItem
 		href="https://me.shtelo.org/zajagox-presentation"
