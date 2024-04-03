@@ -112,6 +112,7 @@
 		profile="junhg0211"
 	/>
 	<SocialBox
+    href="https://game.mahjongsoul.com"
 		src="./image/logo_mahjong_soul.jpg"
 		alt="Mahjong Soul"
 		name="Mahjong Soul"
