@@ -73,8 +73,15 @@
 		alt="bluesky"
 		name="Bluesky"
 		profile="@sch.shtelo.org"
-	/></SocialContainer
->
+	/>
+	<SocialBox
+		href="https://soomgo.com/profile/users/12044926"
+		src="./image/logo_soomgo.svg"
+		alt="soomgo"
+		name="Soomgo"
+		profile="전한결 고수"
+	/>
+</SocialContainer>
 <h3>게임</h3>
 <SocialContainer>
 	<SocialBox
