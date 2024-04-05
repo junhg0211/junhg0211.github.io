@@ -1,5 +1,21 @@
+<script>
+  let nameDecoration;
+  let angle = 0;
+
+  setInterval(() => {
+    angle++;
+    angle %= 360;
+
+    if (nameDecoration == undefined || nameDecoration == null)
+      return;
+
+    nameDecoration.style.background = `linear-gradient(${angle}deg, #ffcf00 20%, #6bd94a 80%, #00cfcf 100%)`;
+    nameDecoration.style.backgroundClip = `text`;
+  }, 1000/24);
+</script>
+
 <img src="./logo/logo_dark.png" alt="스치 로고" style="width: 8rem" />
-<h1>Hangyeol <span class="name-decoration">“Sch”</span> Jeon</h1>
+<h1>Hangyeol <span class="name-decoration" bind:this={nameDecoration}>“Sch”</span> Jeon</h1>
 <p>지식을 갈구하다.</p>
 
 <style>
@@ -11,3 +27,4 @@
 		-webkit-text-fill-color: transparent;
 	}
 </style>
+
