@@ -65,6 +65,12 @@
 		alt="Clicks"
 		name="Clicks"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/single-rumsy"
+		src="./image/logo_rumsy.svg"
+		alt="Rumsy"
+		name="Rumsy"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>
