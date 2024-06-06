@@ -71,6 +71,12 @@
 		alt="Rumsy"
 		name="Rumsy"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/gyulmong"
+		src="./image/logo_gyulmong.svg"
+		alt="귤멍"
+		name="귤멍"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>
