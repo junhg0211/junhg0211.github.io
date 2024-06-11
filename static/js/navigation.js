@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   new IntersectionObserver((e) => {
     e.forEach((box) => {
       if (box.isIntersecting) {
-        navigation.style.transform = "translate(0, -100%)";
-      } else {
         navigation.style.transform = "";
+      } else {
+        navigation.style.transform = "none";
       }
     });
   }).observe(titleBox);

@@ -6,7 +6,7 @@
 	}
 </script>
 
-<div class="navigation" id="navigation" style="transform: translate(0, -100%)">
+<div class="navigation" id="navigation">
 	<div class="content-container">
 		<h3>
 			<img src="./logo/logo_dark.png" alt="스치 로고" style="height: 0.9rem" />
@@ -28,6 +28,7 @@
 		z-index: 1;
 		background: linear-gradient(180deg, rgba(247, 247, 249, 1) 40%, rgba(0, 0, 0, 0) 100%);
 
+    transform: translate(0, -100%);
 		transition: all 0.5s;
 	}
 
