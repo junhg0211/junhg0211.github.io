@@ -38,6 +38,12 @@
 <h3>프로젝트</h3>
 <ul>
 	<ListItem
+		href="https://me.shtelo.org/mahjong-score-calculation"
+		name="16k all"
+    description="마작 점수 계산 연습 사이트"
+    date="24. 6."
+	></ListItem>
+	<ListItem
 		href="https://me.shtelo.org/clicks"
 		name="Clicks"
     description="클릭 공유 사이트"
