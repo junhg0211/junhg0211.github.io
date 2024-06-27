@@ -77,6 +77,12 @@
 		alt="귤멍"
 		name="귤멍"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/mahjong-score-calculation"
+		src="./image/logo_16ka.svg"
+		alt="16000 all"
+		name="16000 all"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>
