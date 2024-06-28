@@ -44,12 +44,6 @@
     date="24. 6."
 	></ListItem>
 	<ListItem
-		href="https://me.shtelo.org/clicks"
-		name="Clicks"
-    description="클릭 공유 사이트"
-    date="24. 3."
-	></ListItem>
-	<ListItem
 		href="https://github.com/junhg0211/enging"
 		name="Enging"
     description="VVVF 오디오 시뮬레이션"

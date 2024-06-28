@@ -60,12 +60,6 @@
 		name="Zÿrdl"
 	/>
 	<SocialBox
-		href="https://me.shtelo.org/clicks"
-		src="./image/logo_clicks.svg"
-		alt="Clicks"
-		name="Clicks"
-	/>
-	<SocialBox
 		href="https://me.shtelo.org/single-rumsy"
 		src="./image/logo_rumsy.svg"
 		alt="Rumsy"
