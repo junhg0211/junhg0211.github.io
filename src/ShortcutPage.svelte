@@ -77,6 +77,18 @@
 		alt="16000 all"
 		name="16000 all"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/timegerine"
+		src="./image/logo_timegerine.svg"
+		alt="timegerine"
+		name="Timegerine"
+	/>
+	<SocialBox
+		href="https://me.shtelo.org/timegerine/pomodoro"
+		src="./image/logo_timegerine.svg"
+		alt="timegerine pomodoro"
+		name="Timegerine pomodoro"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>
