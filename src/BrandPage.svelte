@@ -4,7 +4,7 @@
     flex-direction: row;
   }
 
-  .left-image img {
+  .left-image-img {
     margin-right: 24px;
     width: 300px;
   }
@@ -55,11 +55,11 @@
 
 <h2>브랜드</h2>
 <div class="left-image">
-  <img src="./logo/sch_logo2_lettering.svg">
+  <img src="./logo/sch_logo2_lettering.svg" class="left-image-img">
   <div>
     <h3>로고</h3>
     <p>
-      Sch의 로고는 기존에 사용하던 로고에서 일부분만을 떼어 마치 슬래시를 2개
+    <img src="./logo/sch_logo2_lettering.svg" style="height: 0.9em;">의 로고는 기존에 사용하던 로고에서 일부분만을 떼어 마치 슬래시를 2개
       놓은 것과 같은 형태로 만들어졌다.
     </p>
     <p>
