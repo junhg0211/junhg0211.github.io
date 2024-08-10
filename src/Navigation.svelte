@@ -9,13 +9,15 @@
 <div class="navigation" id="navigation">
 	<div class="content-container">
 		<h3>
-			<img src="./logo/logo_dark.svg" alt="스치 로고" style="height: 0.9rem" />
-			Hangyeol Jeon
+      <a on:click={() => smoothScroll('#title-container')}>
+        <img src="./logo/sch_logo2_lettering.svg" alt="스치 로고" style="height: 1.0rem" />
+      </a>
 		</h3>
 		<ul class="navigation-list">
 			<li><a on:click={() => smoothScroll('#title-container')}>홈</a></li>
 			<li><a on:click={() => smoothScroll('#shortcut-container')}>바로가기</a></li>
 			<li><a on:click={() => smoothScroll('#introduce-container')}>소개</a></li>
+			<li><a on:click={() => smoothScroll('#brand-container')}>브랜드</a></li>
 			<li><a on:click={() => smoothScroll('#contact-container')}>연락</a></li>
 		</ul>
 	</div>

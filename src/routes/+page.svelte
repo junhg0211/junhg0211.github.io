@@ -3,6 +3,7 @@
 	import TitlePage from '../TitlePage.svelte';
 	import ShortcutPage from '../ShortcutPage.svelte';
 	import IntroducePage from '../IntroducePage.svelte';
+	import BrandPage from '../BrandPage.svelte';
 	import ContactPage from '../ContactPage.svelte';
 	import Navigation from '../Navigation.svelte';
 </script>
@@ -11,7 +12,7 @@
 	<meta name="og:title" content="Hangyeol “Sch” Jeon" />
 	<meta name="og:description" content="지식을 갈구하다." />
 	<meta name="og:url" content="https://sch.shtelo.org/" />
-	<meta name="og:image" content="./logo/logo_dark.png" />
+	<meta name="og:image" content="./logo/logo_dark.svg" />
 	<meta name="theme-color" content="#f7f7f9" data-react-helmet="true" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.7" />
 	<link rel="icon" type="image/x-icon" href="./logo/logo_dark_square.png" />
@@ -37,6 +38,9 @@
 	</Page>
 	<Page name="introduce">
 		<IntroducePage />
+	</Page>
+	<Page name="brand">
+		<BrandPage />
 	</Page>
 	<Page name="contact">
 		<ContactPage />

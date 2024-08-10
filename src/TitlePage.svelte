@@ -16,7 +16,7 @@
   */
 </script>
 
-<img src="./logo/logo_mixed.svg" alt="스치 로고" style="width: 8rem" />
+<img src="./logo/sch_logo2_lettering.svg" alt="스치 로고" style="height: 7rem" />
 <h1>Hangyeol <span class="name-decoration" bind:this={nameDecoration}>“Sch”</span> Jeon</h1>
 <p>지식을 갈구하다.</p>
 
