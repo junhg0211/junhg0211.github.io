@@ -9,7 +9,7 @@
 <div class="navigation" id="navigation">
 	<div class="content-container">
 		<h3>
-			<img src="./logo/logo_dark.png" alt="스치 로고" style="height: 0.9rem" />
+			<img src="./logo/logo_dark.svg" alt="스치 로고" style="height: 0.9rem" />
 			Hangyeol Jeon
 		</h3>
 		<ul class="navigation-list">
@@ -31,6 +31,10 @@
     transform: translate(0, -100%);
 		transition: all 0.5s;
 	}
+
+  .navigation h3 {
+    font-weight: bolder;
+  }
 
 	.navigation .content-container {
 		display: flex;
