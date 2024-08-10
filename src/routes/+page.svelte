@@ -15,7 +15,7 @@
 	<meta name="og:image" content="./logo/logo_dark.svg" />
 	<meta name="theme-color" content="#f7f7f9" data-react-helmet="true" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.7" />
-	<link rel="icon" type="image/x-icon" href="./logo/logo_dark_square.png" />
+	<link rel="icon" type="image/x-icon" href="./logo/logo_dark.svg" />
 	<link
 		rel="stylesheet"
 		as="style"
