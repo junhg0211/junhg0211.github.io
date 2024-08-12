@@ -38,6 +38,63 @@
 <h3>프로젝트</h3>
 <ul>
 	<ListItem
+		href="https://junhg0211.github.com/artois"
+		name="Artois"
+    description="스프레드시트 참조 디스코드 봇"
+    date="24. 8."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/zjyrdl"
+		name="Zÿrdl"
+    description="자소크어 Wordle"
+    date="24. 2."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/tapbpm"
+		name="Tap BPM"
+    description="스페이스바를 눌러서 BPM을 측정하는 도구"
+    date="23. 12."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/dictform"
+		name="Dictform"
+    description="사전 형태로 단어 의미를 보여주는 템플릿"
+    date="23. 11."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/clock"
+		name="Clock"
+    description="프로젝터 시계 (리메이크)"
+    date="23. 10."
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/notepad"
+		name="Notepad"
+    description="브라우저에서 사용할 수 있는 큰 텍스트 필드"
+    date="23. 1."
+	></ListItem>
+	<ListItem
+		href="https://liskadia.shtelo.org"
+		name="리스카디아"
+    description="온라인 리스카드"
+    date="22. 11. –"
+	></ListItem>
+	<ListItem
+		href="https://github.com/junhg0211/aice"
+		name="Aicé"
+    description="Windows용 상용구 프로그램"
+    date="21. 11. –"
+	></ListItem>
+	<ListItem
+		href="https://me.shtelo.org/schboard2"
+		name="SchBoard"
+    description="논리 회로 시뮬레이션"
+    date="21. 4. –"
+	></ListItem>
+</ul>
+<h3>토이 프로젝트</h3>
+<ul>
+	<ListItem
 		href="https://me.shtelo.org/mahjong-score-calculation"
 		name="16k all"
     description="마작 점수 계산 연습 사이트"
@@ -56,40 +113,16 @@
     date="24. 2."
 	></ListItem>
 	<ListItem
-		href="https://me.shtelo.org/zjyrdl"
-		name="Zÿrdl"
-    description="자소크어 Wordle"
-    date="24. 2."
-	></ListItem>
-	<ListItem
 		href="https://me.shtelo.org/syntree-svg"
 		name="Syntree SVG"
     description="수형도 트리 SVG화 (오픈소스 기여)"
     date="24. 1."
 	></ListItem>
 	<ListItem
-		href="https://me.shtelo.org/tapbpm"
-		name="Tap BPM"
-    description="스페이스바를 눌러서 BPM을 측정하는 도구"
-    date="23. 12."
-	></ListItem>
-	<ListItem
 		href="https://me.shtelo.org/mahjong-timer"
 		name="Mahjong Timer"
     description="마작 턴 타이머"
     date="23. 12."
-	></ListItem>
-	<ListItem
-		href="https://me.shtelo.org/dictform"
-		name="Dictform"
-    description="사전 형태로 단어 의미를 보여주는 템플릿"
-    date="23. 11."
-	></ListItem>
-	<ListItem
-		href="https://me.shtelo.org/clock"
-		name="Clock"
-    description="프로젝터 시계 (리메이크)"
-    date="23. 10."
 	></ListItem>
 	<ListItem
 		href="https://me.shtelo.org/manual-transmission"
@@ -104,28 +137,10 @@
     date="23. 7."
 	></ListItem>
 	<ListItem
-		href="https://me.shtelo.org/notepad"
-		name="Notepad"
-    description="브라우저에서 사용할 수 있는 큰 텍스트 필드"
-    date="23. 1."
-	></ListItem>
-	<ListItem
-		href="https://liskadia.shtelo.org"
-		name="리스카디아"
-    description="온라인 리스카드"
-    date="22. 11. –"
-	></ListItem>
-	<ListItem
 		href="https://me.shtelo.org/candle"
 		name="Candle"
     description="보고 있으면 재밌는 양봉 차트"
     date="22. 5."
-	></ListItem>
-	<ListItem
-		href="https://github.com/junhg0211/aice"
-		name="Aicé"
-    description="Windows용 상용구 프로그램"
-    date="21. 11. –"
 	></ListItem>
 	<ListItem
 		href="http://www.shtelo.org"
@@ -138,12 +153,6 @@
 		name="Zastravapera"
     description="인공어 사전 디스코드 봇"
     date="22. 2. –"
-	></ListItem>
-	<ListItem
-		href="https://me.shtelo.org/schboard2"
-		name="SchBoard"
-    description="논리 회로 시뮬레이션"
-    date="21. 4. –"
 	></ListItem>
 </ul>
 <h3>운영 종료 프로젝트</h3>
