@@ -167,16 +167,22 @@
 <h3>단체</h3>
 <ul>
 	<ListItem
-		href="https://blog.naver.com/ieumteo"
-		name="동탄중앙이음터센터"
-    description="운영위원회 학생대표"
-    date="21. 1. – 21. 12."
+		href="https://www.army.mil.kr/"
+		name="대한민국 육군"
+    description="군인"
+    date="24. 10. – "
 	></ListItem>
 	<ListItem
 		href="https://lofanfashasch.shtelo.org/"
 		name="로판파샤스"
     description="상사"
     date="21. 7. – "
+	></ListItem>
+	<ListItem
+		href="https://blog.naver.com/ieumteo"
+		name="동탄중앙이음터센터"
+    description="운영위원회 학생대표"
+    date="21. 1. – 21. 12."
 	></ListItem>
 	<ListItem
 		href="https://sites.google.com/view/shtelo"
