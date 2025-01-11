@@ -168,8 +168,8 @@
 <ul>
 	<ListItem
 		href="https://www.army.mil.kr/"
-		name="대한민국 육군"
-    description="군인"
+		name="제22보병사단 55보병여단"
+    description="대형운전병"
     date="24. 10. – "
 	></ListItem>
 	<ListItem
