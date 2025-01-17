@@ -83,6 +83,12 @@
 		alt="timegerine"
 		name="Timegerine"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/krifin"
+		src="./image/logo_krifin.svg"
+		alt="Krifin"
+		name="Krifin"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>
