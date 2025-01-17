@@ -38,13 +38,13 @@
 <h3>프로젝트</h3>
 <ul>
 	<ListItem
-		href="https://junhg0211.github.com/krifin"
+		href="https://me.shtelo.org/krifin"
 		name="Krifin"
     description="온라인 Python 개발 툴"
     date="25. 1."
 	></ListItem>
 	<ListItem
-		href="https://junhg0211.github.com/artois"
+		href="https://github.com/junhg0211/artois"
 		name="Artois"
     description="스프레드시트 참조 디스코드 봇"
     date="24. 8."
