@@ -89,6 +89,12 @@
 		alt="Krifin"
 		name="Krifin"
 	/>
+	<SocialBox
+		href="https://me.shtelo.org/textarea-vim"
+		src="./image/logo_textarea-vim.svg"
+		alt="Textarea-Vim"
+		name="Textarea-Vim"
+	/>
 </SocialContainer>
 <h2>디스코드 서버</h2>
 <SocialContainer></SocialContainer>

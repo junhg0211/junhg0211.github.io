@@ -38,6 +38,12 @@
 <h3>프로젝트</h3>
 <ul>
 	<ListItem
+		href="https://me.shtelo.org/textarea-vim"
+		name="Textarea-Vim"
+    description="Textarea에서 지원 가능한 Javascript vim 구현체"
+    date="25. 1. -"
+	></ListItem>
+	<ListItem
 		href="https://me.shtelo.org/krifin"
 		name="Krifin"
     description="온라인 Python 개발 툴"
