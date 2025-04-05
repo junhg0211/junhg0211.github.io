@@ -38,6 +38,18 @@
 <h3>프로젝트</h3>
 <ul>
 	<ListItem
+		href="https://sat.shtelo.org/gaia"
+		name="Gaia"
+    description="인공세계관을 위한 지도 관리 툴"
+    date="25. 4. -"
+	></ListItem>
+	<ListItem
+		href="https://sat.shtelo.org/"
+		name="Sat Wiki"
+    description="Obsidian과 Hugo를 활용한 위키 엔진"
+    date="25. 3."
+	></ListItem>
+	<ListItem
 		href="https://me.shtelo.org/textarea-vim"
 		name="Textarea-Vim"
     description="Textarea에서 지원 가능한 Javascript vim 구현체"
