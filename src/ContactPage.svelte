@@ -31,11 +31,11 @@
 		profile="Junhg0211"
 	/>
 	<SocialBox
-		href="https://twitter.com/5cheropoenuiZ"
+		href="https://twitter.com/ZasoqueS"
 		src="./image/logo_twitter.svg"
 		alt="트위터"
 		name="Twitter/X"
-		profile="@5cheropoenuiZ"
+		profile="@ZasoqueS"
 	/>
 	<SocialBox
 		href="https://github.com/junhg0211"
