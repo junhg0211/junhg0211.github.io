@@ -19,6 +19,12 @@
 <p>지식을 갈구하다.</p>
 
 <style>
+  h1 {
+    font-size: 4rem;
+    margin: 0.5rem 0 0.2rem 0;
+    letter-spacing: -2px;
+  }
+
 	.name-decoration {
 		/* color: #ffce00; */
 		background: linear-gradient(0deg, #ffce00 00%, #19191e 100%);
