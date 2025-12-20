@@ -191,18 +191,6 @@
 <h3>단체</h3>
 <ul>
 	<ListItem
-		href="https://www.army.mil.kr/"
-		name="제22보병사단 55보병여단"
-    description="대형운전병"
-    date="24. 10. – "
-	></ListItem>
-	<ListItem
-		href="https://lofanfashasch.shtelo.org/"
-		name="로판파샤스"
-    description="상사"
-    date="21. 7. – "
-	></ListItem>
-	<ListItem
 		href="https://blog.naver.com/ieumteo"
 		name="동탄중앙이음터센터"
     description="운영위원회 학생대표"
