@@ -1,6 +1,6 @@
 <script>
-	import SocialContainer from './SocialContainer.svelte';
-	import SocialBox from './SocialBox.svelte';
+	import SocialContainer from '../components/SocialContainer.svelte';
+	import SocialBox from '../components/SocialBox.svelte';
 </script>
 
 <h2>연락</h2>

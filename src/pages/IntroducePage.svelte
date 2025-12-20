@@ -1,5 +1,5 @@
 <script>
-	import ListItem from './ListItem.svelte';
+	import ListItem from '../components/ListItem.svelte';
 </script>
 
 <h2>소개</h2>

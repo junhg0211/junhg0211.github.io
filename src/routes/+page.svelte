@@ -1,11 +1,11 @@
 <script>
-	import Page from '../Page.svelte';
-	import TitlePage from '../TitlePage.svelte';
-	import ShortcutPage from '../ShortcutPage.svelte';
-	import IntroducePage from '../IntroducePage.svelte';
-	import BrandPage from '../BrandPage.svelte';
-	import ContactPage from '../ContactPage.svelte';
-	import Navigation from '../Navigation.svelte';
+	import Page from '../pages/Page.svelte';
+	import TitlePage from '../pages/TitlePage.svelte';
+	import ShortcutPage from '../pages/ShortcutPage.svelte';
+	import IntroducePage from '../pages/IntroducePage.svelte';
+	import BrandPage from '../pages/BrandPage.svelte';
+	import ContactPage from '../pages/ContactPage.svelte';
+	import Navigation from '../components/Navigation.svelte';
 </script>
 
 <svelte:head>
