@@ -54,9 +54,7 @@
 	<SocialBox
 		href="https://www.acmicpc.net/user/junhg0211"
 		src="./image/logo_boj.svg"
-		alt="백준"
-		온라인
-		저지
+		alt="백준 온라인 저지"
 		name="BOJ"
 		profile="junhg0211"
 	/>
@@ -80,6 +78,13 @@
 		alt="soomgo"
 		name="Soomgo"
 		profile="전한결 고수"
+	/>
+	<SocialBox
+		href="https://buymeacoffee.com/junhg0211a"
+		src="./image/logo_buymeacoffee.svg"
+		alt="Buy Me a Coffee"
+		name="Buy Me a Coffee"
+		profile="junhg0211a"
 	/>
 </SocialContainer>
 <h3>게임</h3>
