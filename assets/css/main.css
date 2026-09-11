@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+KR:wght@200..900&display=swap");
+
+body {
+  font-family: "EB Garamond", "Noto Serif KR", serif;
+  color-scheme: light dark;
+  background-color: light-dark(var(--white), var(--black));
+  color: light-dark(var(--black), var(--white));
+  font-size: 13px;
+  line-height: 2;
+
+  --black: #19191e;
+  --white: #f7f7f9;
+  --grey: #7f7f7f;
+  --accent: light-dark(#e0b600, #ffce00);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+p {
+  text-indent: 1rem;
+}

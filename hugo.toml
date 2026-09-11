@@ -1,4 +1,4 @@
-baseURL = 'https://me.shtelo.org/blog'
+baseURL = 'https://me.shtelo.org/'
 locale = 'ko-kr'
 timeZone = 'Asia/Seoul'
 enableEmoji = true
