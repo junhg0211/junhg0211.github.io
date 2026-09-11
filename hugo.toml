@@ -3,3 +3,8 @@ locale = 'ko-kr'
 timeZone = 'Asia/Seoul'
 enableEmoji = true
 title = 'Zasoque'
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
