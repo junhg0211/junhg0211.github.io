@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div>
   <h1>{{ .Title }}</h1>
-  <div style="min-width: 150px; text-align: right">{{ .Date.Format "2006-01-02" }}</div>
+  <div style="min-width: 150px; text-align: right">{{ .Date.Format "2006년 1월 2일 15:04" }}</div>
 </div>
 <div>{{ .Content }}</div>
 {{ $pages := site.RegularPages.ByDate }} {{ $current := . }} {{ range $i, $page := $pages }} {{ if
