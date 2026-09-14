@@ -1,24 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{ with resources.Get "css/main.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
     {{ end }}
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} :: {{ .Site.Title }}</title>
   </head>
   <body>
-    <div style="max-width: 640px; margin: 0 auto; padding: 1rem;">
-      <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-        <div style="font-size: 24px; font-weight: bold;">
+    <div style="max-width: 640px; margin: 0 auto; padding: 1rem">
+      <header
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 24px;
+        "
+      >
+        <div style="font-size: 24px; font-weight: bold">
           <a href="/">Zasoque</a>
         </div>
       </header>
-      <main>
-        {{ block "main" . }}{{ end }}
-      </main>
-      <footer style="margin-top: 24px; font-size: 11px; color: var(--grey);">
+      <main>{{ block "main" . }}{{ end }}</main>
+      <footer style="margin-top: 24px; font-size: 11px; color: var(--grey)">
         Copyright &copy; {{ now.Format "2006" }} Zasoque.
       </footer>
     </div>
