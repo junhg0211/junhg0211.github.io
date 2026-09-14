@@ -3,4 +3,10 @@
   <div style="font-size: 32px; font-weight: bold">{{ .Title }}</div>
   <div style="min-width: 150px; text-align: right">{{ .Date.Format "2006-01-02" }}</div>
 </div>
-{{ .Content }} {{ end }}
+<div>{{ .Content }}</div>
+{{ $pages := site.RegularPages.ByDate }} {{ $current := . }} {{ range $i, $page := $pages }} {{ if
+eq $page $current }} {{ if gt $i 0 }} {{ $prev := index $pages (sub $i 1) }}
+<a href="{{ $prev.RelPermalink }}"> ← {{ $prev.Title }} </a>
+{{ end }} {{ if lt $i (sub (len $pages) 1) }} {{ $next := index $pages (add $i 1) }}
+<a href="{{ $next.RelPermalink }}"> {{ $next.Title }} → </a>
+{{ end }} {{ end }} {{ end }} {{ end }}
