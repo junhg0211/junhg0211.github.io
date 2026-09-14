@@ -1,0 +1,12 @@
+{{ $posts := .Site.RegularPages }} {{ $recentPosts := first 5 (sort $posts "Date" "desc") }}
+
+<div style="margin-top: 20px">
+  {{ range $recentPosts }}
+  <div style="margin-bottom: 10px; border-bottom: 1px solid var(--grey); padding-bottom: 10px">
+    <div>
+      <a href="{{ .Permalink }}">{{ .Title }} <small>{{ .Date.Format "2006-01-02" }}</small></a>
+    </div>
+    <div>{{ .Summary | plainify | truncate 120 }}</div>
+  </div>
+  {{ end }}
+</div>

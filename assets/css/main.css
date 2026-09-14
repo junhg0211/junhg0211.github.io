@@ -5,7 +5,7 @@ body {
   color-scheme: light dark;
   background-color: light-dark(var(--white), var(--black));
   color: light-dark(var(--black), var(--white));
-  font-size: 13px;
+  font-size: 15px;
   line-height: 2;
 
   --black: #19191e;
@@ -42,4 +42,19 @@ h6 {
 }
 p {
   text-indent: 1rem;
+}
+
+ul {
+  padding-left: 20px;
+  padding-bottom: 8px;
+}
+li {
+  line-height: 1.6;
+}
+
+blockquote {
+  border-left: 4px solid var(--grey);
+  padding-left: 12px;
+  margin-left: 0;
+  margin-right: 0;
 }
