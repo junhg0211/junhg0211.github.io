@@ -24,27 +24,30 @@ a:hover {
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 0;
 }
 h2 {
   font-size: 2rem;
-  margin-bottom: 0;
 }
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 0;
 }
 h4 {
   font-size: 1.25rem;
-  margin-bottom: 0;
 }
 h5 {
   font-size: 1rem;
-  margin-bottom: 0;
 }
 h6 {
   font-size: 0.875rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0;
+  line-height: 1.6;
 }
 p {
   text-indent: 1rem;
