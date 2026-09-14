@@ -6,6 +6,9 @@
     {{ with resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
     {{ end }}
+    {{ with resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+    {{ end }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
   </head>
   <body>
@@ -24,7 +27,10 @@
       </header>
       <main>{{ block "main" . }}{{ end }}</main>
       <footer style="margin-top: 24px; font-size: 11px; color: var(--grey)">
-        Copyright &copy; {{ now.Format "2006" }} Zasoque.
+        Hosted by power of <a href="https://pages.github.com/">GitHub Pages</a> and built with
+        <a href="https://gohugo.io/">Hugo</a>. Page designed in <a href=https://zasoque.org>Zasoque</a>.
+        Source code available on <a href="https://github.com/junhg0211/junhg0211.github.io">GitHub</a>.
+        Copyright &copy; <span id="year"></span> Hangyeol Jeon. All rights belong to the respective owners.
       </footer>
     </div>
   </body>
