@@ -9,6 +9,9 @@
     {{ with resources.Get "js/main.js" | minify | fingerprint }}
     <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
     {{ end }}
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
   </head>
   <body>
