@@ -3,17 +3,6 @@
   <h1>{{ .Title }}</h1>
   <div style="min-width: 150px; text-align: right">{{ .Date.Format "2006년 1월 2일 15:04" }}</div>
 </div>
-<div
-  style="
-    display: inline-block;
-    padding: 12px;
-    border: 1px solid light-dark(var(--light-grey), var(--dark-grey));
-    border-radius: 4px;
-  "
->
-  <div>목차</div>
-  {{ .TableOfContents }}
-</div>
 <div>{{ .Content }}</div>
 <div style="margin-top: 20px; display: flex; justify-content: space-between">
   {{ $pages := site.RegularPages.ByDate }} {{ $current := . }} {{ range $i, $page := $pages }} {{ if
