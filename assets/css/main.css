@@ -5,7 +5,7 @@ body {
   color-scheme: light dark;
   background-color: light-dark(var(--white), var(--black));
   color: light-dark(var(--black), var(--white));
-  font-size: 15px;
+  font-size: 14px;
   line-height: 2;
 
   --black: #19191e;
