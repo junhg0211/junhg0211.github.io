@@ -19,7 +19,7 @@ experience building web applications, language tools, and data visualizations.
 
 - **Soonchunhyang University,** B.S. in Computer Software Engineering, 2022 - Present with Expected
   Graduation in 2028
-  - GPA: 4.03 / 4.5
+  - GPA: 4.07 / 4.5
   - Relevant Coursework: Data Structures and Algorithms, Operating Systems, Computer Networks,
     Database Systems, Software Engineering
 
