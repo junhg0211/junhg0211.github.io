@@ -84,6 +84,10 @@ p {
   text-align: justify;
 }
 
+rt {
+  font-size: 0.6em;
+}
+
 ol,
 ul {
   padding-left: 20px;
