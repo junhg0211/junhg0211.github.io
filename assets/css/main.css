@@ -14,6 +14,7 @@ body {
   --light-grey: #bfbfbf;
   --dark-grey: #3f3f3f;
   --grey: #7f7f7f;
+  --light-grey: light-dark(#bfbfbf, #3f3f3f);
   --accent: light-dark(#e09600, #ffce00);
 }
 
