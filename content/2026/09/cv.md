@@ -22,6 +22,9 @@ experience building web applications, language tools, and data visualizations.
   - GPA: 4.07 / 4.5
   - Relevant Coursework: Data Structures and Algorithms, Operating Systems, Computer Networks,
     Database Systems, Software Engineering
+- **Dongtan High School,** High School Diploma, 2019 - 2022
+  - Relevant Coursework: Mathematics I–II, Probability & Statistics, Geometry, Physics I–II,
+    Chemistry I–II
 
 ## Projects
 
