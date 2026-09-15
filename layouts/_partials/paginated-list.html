@@ -1,0 +1,19 @@
+{{ $paginator := . }}
+<div style="margin-top: 8px">
+  {{ range $paginator.Pages }}
+  <div style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--light-grey); padding: 4px 0">
+    <a style="color: inherit" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if not .IsNode }}<small>{{ .Date.Format "2006-01-02" }}</small>{{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ if gt $paginator.TotalPages 1 }}
+<nav aria-label="페이지 이동" style="display: flex; justify-content: center; gap: 8px; margin-top: 16px">
+  {{ with $paginator.Prev }}<a href="{{ .URL }}" aria-label="이전 페이지">←</a>{{ end }}
+  {{ range $paginator.Pagers }}
+    {{ if eq . $paginator }}<strong aria-current="page">{{ .PageNumber }}</strong>
+    {{ else }}<a href="{{ .URL }}">{{ .PageNumber }}</a>{{ end }}
+  {{ end }}
+  {{ with $paginator.Next }}<a href="{{ .URL }}" aria-label="다음 페이지">→</a>{{ end }}
+</nav>
+{{ end }}
