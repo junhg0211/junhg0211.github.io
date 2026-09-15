@@ -74,7 +74,7 @@ tool and a fun way to engage with the Zasokese language community.
 - **Frameworks & Runtime:** SvelteKit, Node.js, Bun, Electron
 - **Databases:** MariaDB, SQLite, MySQL
 - **Infrastructure:** Linux, Caddy, GitHub Actions, self-hosted services
-- **Tools:** Git, GitHub, Neovim, Figma, Blender
+- **Tools:** Git, GitHub, Neovim, Figma, Blender, Affinity
 
 ## Experience and Activities
 
