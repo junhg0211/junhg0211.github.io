@@ -25,7 +25,48 @@ experience building web applications, language tools, and data visualizations.
 
 ## Projects
 
-_COMING SOON_
+### Gaia: Collaborative Infinite Canvas for Worldbuilding
+
+- [GitHub](https://github.com/junhg0211/gaia)
+- Svelte, Electron, WebSocket
+
+Built a desktop infinite-canvas application for collaboratively managing fictional worlds.
+Implemented LAN-based real-time synchronization using WebSockets and custom drawing operations
+including flood fill and outline rendering.
+
+### Textarea-Vim: Vim-like Editing Engine for Web Textareas
+
+- [GitHub](http://github.com/junhg0211/textarea-vim),
+  [Live Preview](https://me.shtelo.org/textarea-vim/)
+- TypeScript, JavaScript
+
+Built a Vim-like editing engine for web textareas, enabling users to navigate and edit text using
+Vim keybindings. Implemented features such as normal mode, insert mode, visual mode, and
+command-line mode, along with support for yanking, pasting, and searching text. The project is
+designed to be easily integrated into web applications, providing a familiar editing experience for
+users who prefer Vim-style text editing.
+
+### Sat Wiki: Git-based Personal Wiki Engine
+
+- [Live Preview](https://sat.shtelo.org/),
+  [GitHub Repository for the Wiki Engine](https://github.com/zeli-b/zeli-b.github.io),
+  [GitHub Repository for the Wiki Content](https://github.com/zeli-b/wiki)
+- Hugo, Obsidian, GitHub Actions
+
+Built a personal wiki engine that uses Git for version control and Hugo for static site generation.
+The engine allows users to create and manage a personal knowledge base with support for markdown
+files, backlinks, and custom templates. Implemented automated deployment using GitHub Actions,
+enabling users to easily publish their wiki to a web server or hosting platform.
+
+### Zÿrdl: Wordle for the Zasokese Constructed Language
+
+- [GitHub](https://github.com/junhg0211/zjyrdl), [Live Preview](https://me.shtelo.org/zjyrdl)
+- HTML, CSS, JavaScript
+
+Built a web-based word-guessing game inspired by Wordle, designed for the Zasokese constructed
+language. Implemented game logic, user interface, and scoring system, allowing players to guess
+Zasokese words within a limited number of attempts. The project serves as both a language learning
+tool and a fun way to engage with the Zasokese language community.
 
 ## Technical Skills
 
