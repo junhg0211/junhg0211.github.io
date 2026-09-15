@@ -24,3 +24,5 @@ title = 'Zasoque'
     startLevel = 2
 [params]
   math = true
+[taxonomies]
+  category = 'categories'

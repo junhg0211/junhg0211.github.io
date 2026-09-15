@@ -1,7 +1,20 @@
 {{ define "main" }}
 <div>
   <h1>{{ .Title }}</h1>
-  <div style="min-width: 150px; text-align: right">{{ .Date.Format "2006년 1월 2일 15:04" }}</div>
+  <div style="min-width: 150px; text-align: right">
+    {{ $page := .Page }} {{ if .Page.Params.Categories | len }}
+    <span>
+      {{ range $i, $category := .Page.Params.Categories }}
+      <span>
+        <a href="/categories/{{ $category | urlize }}">{{ $category }}</a>{{ if not (eq (add $i 1)
+        (len $page.Params.Categories)) }}<span>,</span>{{ end }}
+      </span>
+      {{ end }}
+      <span>—</span>
+    </span>
+    {{ end }}
+    <span>{{ .Date.Format "2006년 1월 2일 15:04" }}</span>
+  </div>
 </div>
 <div>{{ .Content }}</div>
 <div style="margin-top: 20px; display: flex; justify-content: space-between">

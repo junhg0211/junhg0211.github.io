@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div>
+    {{ range .Pages }}
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--light-grey);
+      "
+    >
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <small>{{ .Date.Format "2006-01-02" }}</small>
+    </div>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
