@@ -3,4 +3,32 @@
   <div style="font-size: 64px; font-weight: bold; line-height: 1.2">Läie Z. Sthîe</div>
   <div style="color: var(--grey)">지식을 갈구하다.</div>
 </div>
-{{ .Content }} {{ end }}
+{{ .Content }}
+<h2>모든 글</h2>
+<div style="margin-top: 8px">
+  {{ $paginator := .Paginate .Site.RegularPages 10 }} {{ range $paginator.Pages }}
+  <div
+    style="
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--grey);
+      padding: 4px 0;
+    "
+  >
+    <a style="color: inherit" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <small>{{ .Date.Format "2006-01-02" }}</small>
+  </div>
+  {{ end }}
+</div>
+<nav style="display: flex; justify-content: center; margin-top: 16px">
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}">←</a>
+  {{ end }} {{ range $paginator.Pagers }} {{ if eq . $paginator }}
+  <strong>{{ .PageNumber }}</strong>
+  {{ else }}
+  <a href="{{ .URL }}">{{ .PageNumber }}</a>
+  {{ end }} {{ end }} {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}">→</a>
+  {{ end }}
+</nav>
+{{ end }}

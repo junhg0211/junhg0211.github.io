@@ -86,6 +86,7 @@ p {
 
 rt {
   font-size: 0.6em;
+  color: var(--accent);
 }
 
 ol,

@@ -1,4 +1,4 @@
-{{ $posts := .Site.RegularPages }} {{ $recentPosts := first 5 (sort $posts "Date" "desc") }}
+{{ $posts := .Site.RegularPages }} {{ $recentPosts := first 3 (sort $posts "Date" "desc") }}
 
 <div style="margin-top: 20px">
   {{ range $recentPosts }}
