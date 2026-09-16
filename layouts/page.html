@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div>
-  <h1>{{ .Title }}</h1>
+  <h1 style="text-wrap: pretty">{{ .Title }}</h1>
   <div style="min-width: 150px; text-align: right">
     {{ $page := .Page }} {{ if .Page.Params.Categories | len }}
     <span>
