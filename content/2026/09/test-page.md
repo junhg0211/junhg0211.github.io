@@ -2,5 +2,6 @@
 date = '2026-09-16T06:27:56Z'
 title = 'Test Page'
 categories = []
-draft = true
 +++
+
+이 페이지는 `date`에 세계 시간이 지정되어있지 않은 경우에 어떻게 파일을 표시하는지 확인하기 위한 것입니다.
