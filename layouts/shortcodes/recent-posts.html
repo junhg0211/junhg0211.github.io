@@ -4,7 +4,7 @@
   {{ range $recentPosts }}
   <div style="margin-bottom: 10px">
     <div>
-      <a href="{{ .RelPermalink }}">{{ .Title }} <small>{{ .Date.Format "2006-01-02" }}</small></a>
+      <a href="{{ .RelPermalink }}">{{ .Title }} <small>{{ (time.In "Asia/Seoul" .Date).Format "2006-01-02" }}</small></a>
     </div>
     <div>{{ .Summary | plainify | truncate 120 }}</div>
   </div>

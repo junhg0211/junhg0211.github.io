@@ -13,7 +13,7 @@
       <span>—</span>
     </span>
     {{ end }}
-    <span>{{ .Date.Format "2006년 1월 2일 15:04" }}</span>
+    <span>{{ (time.In "Asia/Seoul" .Date).Format "2006년 1월 2일 15:04" }}</span>
   </div>
 </div>
 <div>{{ .Content }}</div>
