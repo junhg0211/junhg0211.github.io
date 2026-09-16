@@ -10,7 +10,7 @@
     "
   >
     <a style="color: inherit" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ if not .IsPage }}<small>{{ (time.In "Asia/Seoul" .Date).Format "2006-01-02" }}</small>{{ end }}
+    {{ if .IsPage }}<small>{{ (time.In "Asia/Seoul" .Date).Format "2006-01-02" }}</small>{{ end }}
   </div>
   {{ end }}
 </div>
