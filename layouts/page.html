@@ -17,6 +17,14 @@
   </div>
 </div>
 <div>{{ .Content }}</div>
+<div style="margin-top: 20px; display: flex; gap: 20px; justify-content: flex-end; font-size: 10px">
+  <a
+    href="https://github.com/junhg0211/junhg0211.github.io/blob/main/content/{{ .File.Path }}"
+    target="_blank"
+  >
+    수정
+  </a>
+</div>
 <div style="margin-top: 20px; display: flex; justify-content: space-between">
   {{ $pages := site.RegularPages.ByDate }} {{ $current := . }} {{ range $i, $page := $pages }} {{ if
   eq $page $current }} {{ if gt $i 0 }} {{ $prev := index $pages (sub $i 1) }}
