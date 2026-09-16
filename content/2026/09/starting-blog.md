@@ -1,7 +1,7 @@
 +++
 date = '2026-09-14T12:23:50+09:00'
 title = '블로그를 시작하게 되다'
-categories = ['diary']
+categories = ['일기']
 +++
 
 안녕하세요.

@@ -1,7 +1,7 @@
 +++
 date = '2026-09-15T13:33:48+09:00'
 title = 'Resumé'
-categories = ['database']
+categories = ['북마크']
 +++
 
 ## Overview
