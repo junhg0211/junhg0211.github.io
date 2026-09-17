@@ -97,9 +97,6 @@ ol:not(:last-child),
 ul:not(:last-child) {
   padding-bottom: 8px;
 }
-li {
-  line-height: 1.6;
-}
 
 blockquote {
   border-left: 4px solid var(--grey);
