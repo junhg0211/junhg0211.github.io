@@ -1,7 +1,7 @@
 +++
 date = '2026-09-17T15:11:31+09:00'
 title = '판단기준'
-categories = ['diary']
+categories = ['일기']
 +++
 
 ## 오늘 있었던 일
