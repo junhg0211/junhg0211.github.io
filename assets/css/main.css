@@ -27,11 +27,10 @@ a:hover {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 2rem;
-  border-bottom: 1px dotted var(--grey);
+  font-size: 1.4rem;
 }
 h2::before {
   counter-increment: h2;
@@ -39,7 +38,7 @@ h2::before {
   color: var(--accent);
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 h3::before {
   counter-increment: h3;
@@ -47,7 +46,7 @@ h3::before {
   color: var(--accent);
 }
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 h4::before {
   counter-increment: h4;
@@ -55,7 +54,7 @@ h4::before {
   color: var(--accent);
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 h5::before {
   counter-increment: h5;
@@ -63,7 +62,7 @@ h5::before {
   color: var(--accent);
 }
 h6 {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 h6::before {
   counter-increment: h6;
@@ -78,6 +77,14 @@ h5,
 h6 {
   margin-bottom: 0;
   line-height: 1.6;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 2px;
+  border-bottom: 1px dotted var(--grey);
 }
 p {
   text-indent: 1rem;
@@ -99,10 +106,10 @@ ul:not(:last-child) {
 }
 
 blockquote {
-  border-left: 4px solid var(--grey);
-  padding-left: 12px;
-  margin-left: 0;
-  margin-right: 0;
+  text-align: center;
+}
+blockquote p {
+  text-indent: 0;
 }
 
 footer a {
@@ -112,6 +119,19 @@ footer a {
 pre {
   padding: 4px 8px;
   border-radius: 4px;
+}
+
+figure {
+  text-align: center;
+}
+figcaption {
+  font-size: 0.8rem;
+  color: var(--grey);
+  font-style: italic;
+}
+img {
+  max-width: 100%;
+  max-height: 300px;
 }
 
 #TableOfContents {
