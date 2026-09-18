@@ -7,9 +7,9 @@
 <h2>모든 글</h2>
 {{ partial "paginated-list.html" (.Paginate .Site.RegularPages 10) }}
 <h3>카테고리</h3>
-<div>
+<p>
   {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
     <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}" style="margin-right: 10px">{{ $name }}</a>
   {{ end }}
-</div>
+</p>
 {{ end }}
