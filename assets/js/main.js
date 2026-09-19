@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#year").innerText = new Date().getFullYear();
-
-  renderRubyAnnotations(document.querySelector("main"));
-});
-
 /**
  * Converts {base|annotation} in rendered Markdown text to ruby markup.
  *
