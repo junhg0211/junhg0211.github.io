@@ -28,16 +28,36 @@
         <div style="font-size: 24px; font-weight: bold">
           <a href="/">Zasoque</a>
         </div>
-        <button
-          id="cjk-punctuation-toggle"
-          class="punctuation-toggle"
-          type="button"
-          aria-label="동아시아식 문장부호 사용"
-          aria-pressed="false"
-          title="동아시아식 문장부호 사용"
-        >
-          ，。
-        </button>
+        <div class="display-controls">
+          <button
+            id="theme-toggle"
+            class="display-toggle"
+            type="button"
+            aria-label="테마: 시스템 설정"
+            title="테마: 시스템 설정"
+          >
+            자동
+          </button>
+          <button
+            id="font-toggle"
+            class="display-toggle"
+            type="button"
+            aria-label="글꼴: Serif"
+            title="글꼴: Serif"
+          >
+            Serif
+          </button>
+          <button
+            id="cjk-punctuation-toggle"
+            class="display-toggle"
+            type="button"
+            aria-label="동아시아식 문장부호 사용"
+            aria-pressed="false"
+            title="동아시아식 문장부호 사용"
+          >
+            ，。
+          </button>
+        </div>
       </header>
       <main>{{ block "main" . }}{{ end }}</main>
       <footer style="margin-top: 24px; font-size: 11px; color: var(--grey); line-height: 1.3;">
