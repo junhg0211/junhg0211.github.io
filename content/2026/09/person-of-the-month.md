@@ -2,7 +2,7 @@
 date = '2026-09-18T14:35:46+09:00'
 title = '2026년 9월의 인물: ChatGPT'
 categories = ['이번 달의 인물']
-draft = true
+list = "never"
 +++
 
 ## 월기
