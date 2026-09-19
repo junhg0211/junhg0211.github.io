@@ -52,6 +52,30 @@ a:hover {
   text-decoration: underline;
 }
 
+.punctuation-toggle {
+  appearance: none;
+  border: 1px solid var(--grey);
+  border-radius: 999px;
+  padding: 3px 9px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.punctuation-toggle:hover {
+  border-color: var(--accent);
+}
+.punctuation-toggle[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--black);
+}
+.punctuation-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -123,6 +147,7 @@ h6 {
 p {
   text-indent: 1rem;
   margin-bottom: 0;
+  text-align: justify;
 }
 :is(h1, h2, h3, h4, h5, h6) + p,
 p:first-child {
@@ -160,6 +185,7 @@ blockquote {
 }
 blockquote p {
   text-indent: 0;
+  text-align: center;
 }
 
 footer a {
