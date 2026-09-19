@@ -40,7 +40,7 @@
 body {
   font-family: "EB Garamond", "Tsukuhou Mincho", "BookkMyungjo", serif;
   background-color: light-dark(var(--white), var(--black));
-  color: light-dark(var(--black), var(--white));
+  color: --color;
   font-size: 14px;
   line-height: 2;
   counter-reset: h2 h3 h4 h5 h6;
@@ -48,6 +48,7 @@ body {
     color 0.3s ease,
     background-color 0.3s ease;
 
+  --color: light-dark(var(--black), var(--white));
   --black: #19191e;
   --white: #f7f7f9;
   --light-grey: #bfbfbf;
@@ -240,8 +241,12 @@ img {
 
 hr {
   border: none;
-  border-top: 1px solid var(--grey);
-  margin: 8px 0;
+}
+hr::after {
+  content: "⁂"; /* 아스테리즘 유니코드 기호(U+2042) 삽입 */
+  color: var(--accent);
+  text-align: center;
+  display: block;
 }
 
 #TableOfContents {
