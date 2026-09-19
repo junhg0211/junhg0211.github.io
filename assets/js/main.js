@@ -16,7 +16,7 @@
   const punctuationRules = {
     // CJK 문자 뒤에 오며, 뒤따르는 공백까지 없애는 문장부호
     spaced: [
-      { from: ",", to: "，" },
+      { from: ",", to: "、" },
       { from: ".", to: "。" },
       { from: "?", to: "？" },
       { from: "!", to: "！" },
