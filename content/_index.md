@@ -27,3 +27,20 @@ title = '블로그'
 과정 자체를 즐깁니다.
 
 이곳에는 그렇게 공부하고 만들면서 발견한 것들과, 세상을 보다가 문득 궁금해진 것들을 기록합니다.
+
+### 장비 목록
+
+- Mac mini (M2, 2023)
+- MacBook Pro 15' (2017)
+- HHKB Professional HYBRID Type-S
+- Logitech MX Master 3S White
+- Apple Magic Trackpad 2 (Lightning to USB-C Cable)
+- LG 32UK550 (3840x2160, 60Hz)
+- 한성컴퓨터 TFG24F14P2 (1920x1080, 144Hz)
+- iPhone 17 Seige
+- Galaxy Z Flip 4
+- iPad Air (4th Gen)
+- Apple Pencil (2nd Gen)
+- Apple AirPods Max (1st Gen)
+- Scarlett Solo 1st Gen
+- SONY MDR-7506
