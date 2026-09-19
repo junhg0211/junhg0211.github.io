@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+JP:wght@200..900&display=swap");
 
 @font-face {
   font-family: "BookkMyungjo";
@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: "EB Garamond", "BookkMyungjo", serif;
+  font-family: "EB Garamond", "BookkMyungjo", "Noto Serif JP", serif;
   color-scheme: light dark;
   background-color: light-dark(var(--white), var(--black));
   color: light-dark(var(--black), var(--white));
@@ -110,6 +110,18 @@ p {
 rt {
   font-size: 0.6em;
   color: var(--accent);
+}
+
+mark {
+  background-color: transparent;
+  background-image: radial-gradient(circle, var(--accent) 0.08em, transparent 0.09em);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 1em 0.3em;
+  box-decoration-break: clone;
+  color: inherit;
+  padding-top: 0.3em;
+  -webkit-box-decoration-break: clone;
 }
 
 ol,

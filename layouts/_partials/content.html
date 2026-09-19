@@ -1,0 +1,41 @@
+{{- $content := "" -}}
+{{- $markSegments := split .Content "</mark>" -}}
+{{- $lastMarkSegment := sub (len $markSegments) 1 -}}
+{{- range $index, $segment := $markSegments -}}
+  {{- $renderedSegment := $segment -}}
+  {{- if lt $index $lastMarkSegment -}}
+    {{- $renderedSegment = printf "%s</mark>" $segment -}}
+  {{- end -}}
+  {{- if lt $index $lastMarkSegment -}}
+    {{- $matches := findRESubmatch `(?s)^(.*)<mark>(.*)$` $segment 1 -}}
+    {{- if $matches -}}
+      {{- $match := index $matches 0 -}}
+      {{- $before := index $match 1 -}}
+      {{- $inner := index $match 2 -}}
+      {{- if strings.Contains $inner "\n" -}}
+        {{- $renderedSegment = printf "%s==%s==" $before $inner -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $content = printf "%s%s" $content $renderedSegment -}}
+{{- end -}}
+
+{{- $ignoredDepth := 0 -}}
+{{- range findRE `(?s)<[^>]+>|[^<]+` $content -}}
+  {{- $token := . -}}
+  {{- if hasPrefix $token "<" -}}
+    {{- if findRE `(?i)^</(code|pre|script|style|textarea|ruby)>` $token -}}
+      {{- $ignoredDepth = sub $ignoredDepth 1 -}}
+    {{- end -}}
+    {{- $token | safeHTML -}}
+    {{- if findRE `(?i)^<(code|pre|script|style|textarea|ruby)(\s|>)` $token -}}
+      {{- $ignoredDepth = add $ignoredDepth 1 -}}
+    {{- end -}}
+  {{- else if eq $ignoredDepth 0 -}}
+    {{- $token = $token | replaceRE `\{([^{}|\n]+)\|([^{}|\n]+)\}` `<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>` -}}
+    {{- $token = $token | replaceRE `==([^=\n]+)==` `<mark>$1</mark>` -}}
+    {{- $token | safeHTML -}}
+  {{- else -}}
+    {{- $token | safeHTML -}}
+  {{- end -}}
+{{- end -}}

@@ -16,7 +16,7 @@
     <time>{{ (time.In "Asia/Seoul" .Date).Format "2006년 1월 2일 15:04" }}</time>
   </div>
 </div>
-<div>{{ .Content }}</div>
+<div>{{ partial "content.html" . }}</div>
 <div style="margin-top: 20px; display: flex; gap: 20px; justify-content: flex-end; font-size: 10px">
   <a
     href="https://github.com/junhg0211/junhg0211.github.io/blob/main/content/{{ .File.Path }}"
