@@ -6,13 +6,9 @@
     <link rel="icon" href="/images/favicon.svg" />
     {{ with resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
-    {{ end }}
-    {{ with resources.Get "js/main.js" | minify | fingerprint }}
+    {{ end }} {{ with resources.Get "js/main.js" | minify | fingerprint }}
     <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
-    {{ end }}
-    {{ if .Param "math" }}
-      {{ partialCached "math.html" . }}
-    {{ end }}
+    {{ end }} {{ if .Param "math" }} {{ partialCached "math.html" . }} {{ end }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
   </head>
   <body>
@@ -60,39 +56,41 @@
         </div>
       </header>
       <main>{{ block "main" . }}{{ end }}</main>
-      <footer style="margin-top: 24px; font-size: 11px; color: var(--grey); line-height: 1.3;">
+      <footer style="margin-top: 24px; font-size: 11px; color: var(--grey); line-height: 1.3">
         <p>
-        Hosted on <a href="https://pages.github.com/">GitHub Pages</a> and built with
-        <a href="https://gohugo.io/">Hugo</a>. Designed by
-        <a href=https://zasoque.org>Zasoque</a>. Source code available on
-        <a href="https://github.com/junhg0211/junhg0211.github.io">GitHub</a>.
-        Latin serif font “EB Garamond” is licensed under
-        <a href="https://fonts.google.com/specimen/EB Garamond">the SIL Open Font License, Version 1.1</a>.
-        Korean serif font “BookkMyungjo” is licensed under
-        <a href="https://noonnu.cc/font_page/1084">the terms provided by the font author</a>.
-        Japanese serif font “Tsukuhou Mincho” is licensed under
-        <a href="/fonts/OFL-TsukuhouMincho.txt">the SIL Open Font License, Version 1.1</a>.
-        Korean, Latin sans-serif font “Pretendard” is licensed under
-        <a href="https://github.com/orioncactus/pretendard/blob/main/LICENSE">the SIL Open Font License, Version 1.1</a>.
-        This site is not guaranteed to be free of errors or omissions.
-        We provide <a href="/index.xml">RSS</a> and <a href="/sitemap.xml">Sitemap</a> for your convenience.
+          이 사이트는 <a href="https://pages.github.com/">GitHub Pages</a>에서 호스팅되며
+          <a href="https://gohugo.io/">Hugo</a>로 제작되었습니다.
+          <a href="https://zasoque.org/">Zasoque</a>가 디자인하였으며, 소스 코드는
+          <a href="https://github.com/junhg0211/junhg0211.github.io">GitHub</a>에서 확인할 수
+          있습니다. 라틴 문자 명조체 “EB Garamond”는
+          <a href="https://fonts.google.com/specimen/EB%20Garamond"
+            >SIL Open Font License, Version 1.1</a
+          >에 따라 이용됩니다. 한글 명조체 “BookkMyungjo”는
+          <a href="https://noonnu.cc/font_page/1084">글꼴 제작자가 정한 이용 조건</a>에 따라
+          이용됩니다. 일본어 명조체 “Tsukuhou Mincho”는
+          <a href="/fonts/OFL-TsukuhouMincho.txt">SIL Open Font License, Version 1.1</a>에 따라
+          이용됩니다. 한글 및 라틴 문자 고딕체 “Pretendard”는
+          <a href="https://github.com/orioncactus/pretendard/blob/main/LICENSE"
+            >SIL Open Font License, Version 1.1</a
+          >에 따라 이용됩니다. 이 사이트의 내용에 오류나 누락이 없음을 보장하지 않습니다. 편의를
+          위해 <a href="/index.xml">RSS 피드</a>와 <a href="/sitemap.xml">사이트맵</a>을 제공합니다.
         </p>
         <p>
-        Archived content is preserved for historical reference and may not reflect the author's current views.
-        This site was last built on <time>{{ now.Format "January 2, 2006 at 3:04 PM MST" }}</time>.
-        Content may be revised, relocated, or removed without prior notice.
-        Permalinks are intended to remain stable whenever practicable.
-        Links to external websites are provided for reference and do not imply endorsement of their contents.
+          보관된 콘텐츠는 역사적 기록을 위해 유지되며 현재 작성자의 견해를 반영하지 않을 수
+          있습니다. 이 사이트는 <time>{{ now.Format "2006년 1월 2일 15:04 MST" }}</time>에
+          마지막으로 빌드되었습니다. 콘텐츠는 사전 고지 없이 수정, 이동 또는 삭제될 수 있습니다.
+          고유주소(permalink)는 가능한 한 변경하지 않는 것을 원칙으로 합니다. 외부 웹사이트로
+          연결되는 링크는 참고를 위해 제공되며, 해당 사이트의 내용을 지지하거나 보증함을 의미하지
+          않습니다.
         </p>
         <p>
-        This site does not use analytics, advertising, or tracking cookies.
-        No personal information is intentionally collected by the site operator.
-        Third-party service providers may process technical information necessary to provide
-        their services under their respective privacy policies.
+          이 사이트는 방문자 분석, 광고 또는 추적 쿠키를 사용하지 않습니다. 사이트 운영자는
+          개인정보를 의도적으로 수집하지 않습니다. 제3자 서비스 제공자는 서비스 제공에 필요한 기술적
+          정보를 각자의 개인정보 처리방침에 따라 처리할 수 있습니다.
         </p>
         <p>
-        Copyright &copy; <time>{{ now.Format "2006" }}</time> Hangyeol Jeon.
-        All trademarks and other rights on this page belong to their respective owners.
+          Copyright &copy; <time>{{ now.Format "2006" }}</time> Hangyeol Jeon. 모든 상표에 관한
+          권리는 각 권리자에게 있습니다.
         </p>
       </footer>
     </div>
