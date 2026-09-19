@@ -116,6 +116,10 @@ p {
   text-indent: 1rem;
   margin-bottom: 0;
 }
+:is(h1, h2, h3, h4, h5, h6) + p,
+p:first-child {
+  text-indent: 0;
+}
 
 rt {
   font-size: 0.6em;
