@@ -5,8 +5,9 @@
   src: url("/fonts/TsukuhouMincho-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
-  unicode-range: U+2E80-2EFF, U+2F00-2FDF, U+3000-303F, U+3040-30FF,
-    U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+  unicode-range:
+    U+2E80-2EFF, U+2F00-2FDF, U+3000-303F, U+3040-30FF, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF,
+    U+F900-FAFF, U+FF00-FFEF;
 }
 
 @font-face {
@@ -157,8 +158,12 @@ footer p {
 }
 
 pre {
+  font-size: 11px;
   padding: 4px 8px;
   border-radius: 4px;
+  text-wrap: pretty;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 figure {
