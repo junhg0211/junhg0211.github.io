@@ -28,6 +28,10 @@ title = '블로그'
 
 이곳에는 그렇게 공부하고 만들면서 발견한 것들과, 세상을 보다가 문득 궁금해진 것들을 기록합니다.
 
+- 친구들:
+  - [blog.dacordia.com](https://blog.dacordia.com)
+  - [b.halv.kr](https://b.halv.kr)
+
 ### 장비 목록
 
 - Mac mini (M2, 2023)
