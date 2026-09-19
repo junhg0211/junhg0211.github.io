@@ -131,6 +131,9 @@ blockquote p {
 footer a {
   color: inherit;
 }
+footer p {
+  text-indent: 0;
+}
 
 pre {
   padding: 4px 8px;
