@@ -125,7 +125,7 @@
   }
 
   function updateFontButton(button, font) {
-    const name = font === "serif" ? "Serif" : "Sans";
+    const name = font === "serif" ? "모" : "민";
     const label = `글꼴: ${name}`;
     button.textContent = name;
     button.setAttribute("aria-label", label);
