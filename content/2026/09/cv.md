@@ -18,8 +18,8 @@ experience building web applications, language tools, and data visualizations.
 
 ## Education
 
-- **[Soonchunhyang University](https://home.sch.ac.kr),** B.S. in Computer Software Engineering, 2022 - Present with Expected
-  Graduation in Feb 2028
+- **[Soonchunhyang University](https://home.sch.ac.kr),** B.S. in Computer Software Engineering,
+  2022 - Present with Expected Graduation in Feb 2028
   - GPA: 4.07 / 4.5
   - Relevant Coursework: Data Structures and Algorithms, Operating Systems, Computer Networks,
     Database Systems, Software Engineering, Machine Learning, Artificial Intelligence, Computer
@@ -89,7 +89,9 @@ tool and a fun way to engage with the Zasokese language community.
   - Operated military vehicles and supported transportation and logistics operations.
   - Participated in training exercises and field operations, strengthening problem-solving skills
     and adaptability in high-pressure environments.
-- **Technical Support Volunteer,** Gangwon 2024 Winter Youth Olympic Games, 2024
+- **Technical Support Volunteer,**
+  [Gangwon 2024 Winter Youth Olympic Games](https://www.olympics.com/en/olympic-games/gangwon-2024),
+  2024
   - Provided technical support for event IT infrastructure and assisted with on-site
     troubleshooting.
   - Collaborated with a team to ensure the reliable operation of technology systems throughout the
