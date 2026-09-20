@@ -76,9 +76,11 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
 }
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .display-controls {
@@ -209,6 +211,19 @@ ul {
 ol:not(:last-child),
 ul:not(:last-child) {
   padding-bottom: 8px;
+}
+
+ol {
+  list-style-type: cjk-decimal;
+}
+ol ol {
+  list-style-type: cjk-heavenly-stem;
+}
+ol ol ol {
+  list-style-type: cjk-earthly-branch;
+}
+ol ol ol ol {
+  list-style-type: cjk-ideographic;
 }
 
 blockquote {
