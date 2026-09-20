@@ -37,7 +37,7 @@
   color-scheme: dark;
 }
 
-:not(:is(pre)) + code {
+:not(:is(pre)) > code {
   font-family: "Anonymous Pro", monospace;
   font-size: 0.8rem;
   background-color: var(--dark-grey);
