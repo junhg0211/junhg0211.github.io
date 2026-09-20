@@ -1,110 +1,105 @@
 +++
 date = '2026-09-15T13:33:48+09:00'
-title = 'Resumé'
+title = '전한결 (Hangyeol Jeon)'
 categories = ['북마크']
 +++
 
-## Overview
+## 개요
 
-> **Hangyeol Jeon (전한결)**
+> 전한결 (Hangyeol Jeon)
 
-- Computer Software Engineering Student
-- Email [junhg0211@gmail.com](mailto:junhg0211@gmail.com)
-- GitHub [junhg0211](https://github.com/junhg0211)
+- 컴퓨터소프트웨어공학 학사 예정, 순천향대학교
+- 이메일 [junhg0211@gmail.com](mailto:junhg0211@gmail.com)
+- 깃허브 [junhg0211](https://github.com/junhg0211)
 
-Software engineering student focused on building interactive systems and developer tools.
-Experienced in TypeScript, SvelteKit, Node.js/Bun, and self-hosted infrastructure, with hands-on
-experience building web applications, language tools, and data visualizations.
+상호작 시스템과 개발자 도구를 구축하는 데 중점을 둔 소프트웨어 공학 학생입니다. TypeScript,
+SvelteKit, Node.js/Bun 및 자체 호스팅 인프라에서 경험이 있으며 웹 애플리케이션, 언어 도구 및 데이터
+시각화를 구축한 실무 경험이 있습니다.
 
-## Education
+## 학력
 
-- **[Soonchunhyang University](https://home.sch.ac.kr),** B.S. in Computer Software Engineering,
-  2022 - Present with Expected Graduation in Feb 2028
+- **[순천향대학교](https://home.sch.ac.kr),** 컴퓨터소프트웨어공학 공학학사, 2022 - 현재 (2028년 2월
+  졸업 예정)
   - GPA: 4.07 / 4.5
-  - Relevant Coursework: Data Structures and Algorithms, Operating Systems, Computer Networks,
-    Database Systems, Software Engineering, Machine Learning, Artificial Intelligence, Computer
-    Graphics, Engineering Mathematics, Probability & Statistics, Advanced ICT English
-- **Dongtan High School,** High School Diploma, 2019 - 2022
-  - Relevant Coursework: Mathematics I–II, Probability & Statistics, Geometry, Physics I–II,
-    Chemistry I–II
+  - 관련 과목: 자료구조와 알고리즘, 운영체제, 컴퓨터네트워크, 데이터베이스, 소프트웨어공학,
+    기계학습, 인공지능, 컴퓨터그래픽스, 공학수학, 확률과통계, 고급ICT영어
+- **동탄고등학교,** 고등학교 졸업, 2019 - 2022
+  - 관련 과목: 수학 I-II, 확률과 통계, 기하, 물리학 I-II, 화학 I-II
 
-## Projects
+## 프로젝트
 
-### Gaia: Collaborative Infinite Canvas for Worldbuilding
+### 가이아: 세계 구축을 위한 협업 무한 캔버스
 
-- [GitHub](https://github.com/junhg0211/gaia)
-- Svelte, Electron, WebSocket
+- [깃허브](https://github.com/junhg0211/gaia)
+- Svelte, Electron, WebSocket, TypeScript
 
-Built a desktop infinite-canvas application for collaboratively managing fictional worlds.
-Implemented LAN-based real-time synchronization using WebSockets and custom drawing operations
-including flood fill and outline rendering.
+데스크톱 애플리케이션으로, 사용자가 가상의 세계를 구축하고 관리할 수 있는 협업 무한 캔버스를
+제공합니다. 웹소켓을 활용하여 LAN 기반의 실시간 동기화를 구현하고, 사용자 정의 드로잉 작업(예:
+플러드 필, 윤곽선 렌더링)을 지원합니다.
 
-### Textarea-Vim: Vim-like Editing Engine for Web Textareas
+### Textarea-Vim: 웹 텍스트 영역을 위한 Vim 스타일 편집 엔진
 
 - [GitHub](http://github.com/junhg0211/textarea-vim),
-  [Live Preview](https://me.shtelo.org/textarea-vim/)
+  [웹사이트](https://me.shtelo.org/textarea-vim/)
 - TypeScript, JavaScript
 
-Built a Vim-like editing engine for web textareas, enabling users to navigate and edit text using
-Vim keybindings. Implemented features such as normal mode, insert mode, visual mode, and
-command-line mode, along with support for yanking, pasting, and searching text. The project is
-designed to be easily integrated into web applications, providing a familiar editing experience for
-users who prefer Vim-style text editing.
+Vim 스타일의 텍스트 편집기를 웹 텍스트 영역에 구현하여 사용자가 Vim 키 바인딩을 사용하여 텍스트를
+탐색하고 편집할 수 있도록 합니다. 일반 모드, 입력 모드, 시각 모드, 명령줄 모드와 같은 기능을
+구현하고, 텍스트를 복사하고 붙여넣기, 검색하는 기능을 지원합니다. 이 프로젝트는 웹 애플리케이션에
+쉽게 통합될 수 있도록 설계되어 Vim 스타일의 텍스트 편집 경험을 선호하는 사용자에게 친숙한 편집
+환경을 제공합니다.
 
-### Sat Wiki: Git-based Personal Wiki Engine
+### 사트위키: Git 기반 개인용 위키 엔진
 
-- [Live Preview](https://sat.shtelo.org/),
-  [GitHub Repository for the Wiki Engine](https://github.com/zeli-b/zeli-b.github.io),
-  [GitHub Repository for the Wiki Content](https://github.com/zeli-b/wiki)
+- [웹사이트](https://sat.shtelo.org/),
+  [엔진 GitHub 레포지토리](https://github.com/zeli-b/zeli-b.github.io),
+  [내용 GitHub 레포지토리](https://github.com/zeli-b/wiki)
 - Hugo, Obsidian, GitHub Actions
 
-Built a personal wiki engine that uses Git for version control and Hugo for static site generation.
-The engine allows users to create and manage a personal knowledge base with support for markdown
-files, backlinks, and custom templates. Implemented automated deployment using GitHub Actions,
-enabling users to easily publish their wiki to a web server or hosting platform.
+Git 버전 관리를 사용하여 개인 위키 엔진을 구축하고 Hugo를 사용하여 정적 사이트 생성을 구현했습니다.
+이 엔진은 사용자가 마크다운 파일, 백링크 및 사용자 정의 템플릿을 지원하여 개인 지식 기반을 생성하고
+관리할 수 있도록 합니다. GitHub Actions를 사용하여 자동 배포를 구현하여 사용자가 위키를 웹 서버나
+호스팅 플랫폼에 쉽게 게시할 수 있도록 했습니다.
 
-### Zÿrdl: Wordle for the Zasokese Constructed Language
+### Zÿrdl: 인공언어 자소크어를 위한 Wordle 게임
 
-- [GitHub](https://github.com/junhg0211/zjyrdl), [Live Preview](https://me.shtelo.org/zjyrdl)
+- [GitHub](https://github.com/junhg0211/zjyrdl), [웹사이트](https://me.shtelo.org/zjyrdl)
 - HTML, CSS, JavaScript
 
-Built a web-based word-guessing game inspired by Wordle, designed for the Zasokese constructed
-language. Implemented game logic, user interface, and scoring system, allowing players to guess
-Zasokese words within a limited number of attempts. The project serves as both a language learning
-tool and a fun way to engage with the Zasokese language community.
+Wordle 게임에서 영감을 받아 제작한 웹 기반 단어 추측 게임으로, 자소크어라는 인공언어를 위해
+설계되었습니다. 게임 로직, 사용자 인터페이스 및 점수 시스템을 구현하여 플레이어가 제한된 횟수 내에
+자소크어 단어를 추측할 수 있도록 했습니다. 프로젝트는 언어 학습 도구이자 자소크어 커뮤니티와의
+재미있는 상호작용 수단으로 활용됩니다.
 
-## Technical Skills
+## 기술
 
-- **Languages:** TypeScript, JavaScript, Python, SQL
-- **Frameworks & Runtime:** SvelteKit, Node.js, Bun, Electron
-- **Databases:** MariaDB, SQLite, MySQL
-- **Infrastructure:** Linux, Caddy, GitHub Actions, self-hosted services
-- **Tools:** Git, GitHub, Neovim, Figma, Blender, Affinity
+- **언어:** TypeScript, JavaScript, Python, SQL
+- **런타임과 프레임워크:** SvelteKit, Node.js, Bun, Electron
+- **데이터베이스:** MariaDB, SQLite, MySQL
+- **기반시설:** Linux, Caddy, GitHub Actions, self-hosted services
+- **도구:** Git, GitHub, Neovim, Figma, Blender, Affinity
 
-## Experience and Activities
+## 경험 및 활동
 
-- **Soldier,** Republic of Korea Army, 2024 - 2025
-  - Served in the Republic of Korea Army, developing strong teamwork, discipline, and leadership
-    skills.
-  - Operated military vehicles and supported transportation and logistics operations.
-  - Participated in training exercises and field operations, strengthening problem-solving skills
-    and adaptability in high-pressure environments.
-- **Technical Support Volunteer,**
-  [Gangwon 2024 Winter Youth Olympic Games](https://www.olympics.com/en/olympic-games/gangwon-2024),
-  2024
-  - Provided technical support for event IT infrastructure and assisted with on-site
-    troubleshooting.
-  - Collaborated with a team to ensure the reliable operation of technology systems throughout the
-    event.
-  - Developed practical experience in technical problem-solving and event operations in a fast-paced
-    environment.
-- **Student Representative,** Dongtan Jungang E-eumteo Center Steering Committee, 2021
-  - Represented the student body on the steering committee, contributing to planning and
-    decision-making for center activities.
+- **운영지원 자원봉사자,** [퍼:레이드 2026](https://furraid.kr/), 2026
+  - 1,000명 규모의 퍼리 커뮤니티 이벤트에서 운영 지원을 제공하여 원활한 이벤트 진행에 기여했습니다.
+- **군인,** 대한민국 육군, 2024 - 2025
+  - 대한민국 육군에서 복무하며 팀워크, 규율 및 리더십 능력을 개발했습니다.
+  - 군용 장비 및 시스템을 유지보수하고 운영하여 기술적 문제 해결 능력을 향상시켰습니다.
+  - 높은 수준의 책임감과 시간 관리 능력을 요구하는 환경에서 근무하며, 프로젝트 관리 및 협업 능력을
+    향상시켰습니다.
+- **기술지원 자원봉사자,**
+  [강원 2024 동계청소년올림픽게임](https://www.olympics.com/en/olympic-games/gangwon-2024), 2024
+  - IT 기반 시설의 설치, 유지보수 및 문제 해결을 지원하여 원활한 이벤트 운영에 기여했습니다.
+  - 팀과 협력하여 이벤트 전반에 걸쳐 기술 시스템의 안정적인 운영을 보장했습니다.
+  - 빠른 속도의 환경에서 기술적 문제 해결 및 이벤트 운영에 대한 실무 경험을 쌓았습니다.
+- **학생대표,** 동탄중앙이음터센터 운영위원회, 2021
+  - 지역 사회와 협력하여 지역의 청소년을 대변하고 청소년 프로그램 및 활동을 개선하기 위한 정책을
+    제안했습니다.
 
-## Languages and Interests
+## 언어 및 관심사
 
-- **Languages:** Korean (Native), Japanese (Intermediate), English (Intermediate)
-- **Interests:** Open-source software development, computational linguistics, constructed languages,
-  interactive systems, developer tools, data visualization, community engagement, and technology
-  education.
+- **언어:** 한국어 (원어민), 일본어 (중급), 영어 (중급)
+- **관심사:** 오픈소스 소프트웨어 개발, 계산언어학, 인공언어, 상호작용 시스템, 개발자 도구, 데이터
+  시각화, 커뮤니티 참여 및 기술 교육, 퍼리, 디지털 취약계층의 기술 접근성 향상, 소수자 인권, 기술과
+  사회적 영향에 대한 연구.
