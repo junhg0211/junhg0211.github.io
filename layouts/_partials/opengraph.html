@@ -1,0 +1,48 @@
+{{- $title := .Title | default .Site.Title -}}
+{{- $description := .Description | default .Summary | plainify | htmlUnescape -}}
+{{- $description = $description | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 -}}
+{{- $description = $description | default $title -}}
+{{- $image := "" -}}
+{{- $imageAlt := "" -}}
+{{- $pageURL := urls.Parse .Permalink -}}
+
+{{/* Inspect rendered content so Markdown and shortcode images use the same URLs as the page. */}}
+{{- range findRE `(?is)<img\b[^>]*>` .Content -}}
+  {{- if not $image -}}
+    {{- $src := findRESubmatch `(?is)\ssrc\s*=\s*(?:"([^"]+)"|'([^']+)')` . 1 -}}
+    {{- with $src -}}
+      {{- $match := index . 0 -}}
+      {{- $source := index $match 1 | default (index $match 2) | htmlUnescape -}}
+      {{- $url := $pageURL.ResolveReference (urls.Parse $source) -}}
+      {{- if in (slice "http" "https") $url.Scheme -}}
+        {{- $image = $url.String -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $image -}}
+      {{- with findRESubmatch `(?is)\salt\s*=\s*(?:"([^"]*)"|'([^']*)')` . 1 -}}
+        {{- $match := index . 0 -}}
+        {{- $imageAlt = index $match 1 | default (index $match 2) | htmlUnescape -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<meta name="description" content="{{ $description }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+{{ if $image -}}
+<meta property="og:image" content="{{ $image }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ $image }}" />
+{{ with $imageAlt -}}
+<meta property="og:image:alt" content="{{ . }}" />
+<meta name="twitter:image:alt" content="{{ . }}" />
+{{ end -}}
+{{ else -}}
+<meta name="twitter:card" content="summary" />
+{{ end -}}

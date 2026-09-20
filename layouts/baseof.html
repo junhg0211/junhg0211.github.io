@@ -10,6 +10,7 @@
     <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
     {{ end }} {{ if .Param "math" }} {{ partialCached "math.html" . }} {{ end }}
     <title>{{ .Title }} :: {{ .Site.Title }}</title>
+    {{ partial "opengraph.html" . }}
   </head>
   <body>
     <div style="max-width: 480px; margin: 0 auto; padding: 1rem">
