@@ -25,13 +25,29 @@
     수정
   </a>
 </div>
-<div style="margin-top: 20px; display: flex; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; margin-top: 20px">
   {{ $pages := site.RegularPages.ByDate }} {{ $current := . }} {{ range $i, $page := $pages }} {{ if
   eq $page $current }} {{ if gt $i 0 }} {{ $prev := index $pages (sub $i 1) }}
   <a href="{{ $prev.RelPermalink }}"> ← {{ $prev.Title }} </a>
-  {{ end }} {{ if lt $i (sub (len $pages) 1) }} {{ $next := index $pages (add $i 1) }}
+  {{ end }}
   <span style="flex: 1"></span>
+  {{ if lt $i (sub (len $pages) 1) }} {{ $next := index $pages (add $i 1) }}
   <a href="{{ $next.RelPermalink }}"> {{ $next.Title }} → </a>
   {{ end }} {{ end }} {{ end }}
 </div>
-{{ end }}
+{{ range .Params.Categories }}
+<div style="margin-top: 12px">
+  <div style="font-size: 10px"><a href="/categories/{{ . | urlize }}">{{ . }}</a>의 글</div>
+  <div style="display: flex; justify-content: flex-end">
+    {{ $category := . }} {{ $categoryPages := where site.RegularPages.ByDate "Params.Categories"
+    "intersect" (slice $category) }} {{ range $i, $page := $categoryPages }} {{ if eq $page $.Page
+    }} {{ if gt $i 0 }} {{ $prev := index $categoryPages (sub $i 1) }}
+    <a href="{{ $prev.RelPermalink }}"> ← {{ $prev.Title }} </a>
+    {{ end }}
+    <span style="flex: 1"></span>
+    {{ if lt $i (sub (len $categoryPages) 1) }} {{ $next := index $categoryPages (add $i 1) }}
+    <a href="{{ $next.RelPermalink }}"> {{ $next.Title }} → </a>
+    {{ end }} {{ end }} {{ end }}
+  </div>
+</div>
+{{ end }} {{ end }}
