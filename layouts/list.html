@@ -2,7 +2,7 @@
 <main>
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-
+  <hr />
   {{ partial "paginated-list.html" (.Paginate .Pages 10) }}
 </main>
 {{ end }}
