@@ -73,11 +73,13 @@ Wordle 게임에서 영감을 받아 제작한 웹 기반 단어 추측 게임�
 
 ## 기술
 
-- **언어:** TypeScript, JavaScript, Python, SQL
-- **런타임과 프레임워크:** SvelteKit, Node.js, Bun, Electron
-- **데이터베이스:** MariaDB, SQLite, MySQL
-- **기반시설:** Linux, Caddy, GitHub Actions, self-hosted services
-- **도구:** Git, GitHub, Neovim, Figma, Blender, Affinity
+- **자둥차운전면허,** 1종보통, 2022 - 현재
+- 기타
+  - **언어:** TypeScript, JavaScript, Python, SQL
+  - **런타임과 프레임워크:** SvelteKit, Node.js, Bun, Electron
+  - **데이터베이스:** MariaDB, SQLite, MySQL
+  - **기반시설:** Linux, Caddy, GitHub Actions, self-hosted services
+  - **도구:** Git, GitHub, Neovim, Figma, Blender, Affinity
 
 ## 경험 및 활동
 
