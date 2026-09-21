@@ -14,9 +14,7 @@ title = '블로그'
 
 {{< recent-posts >}}
 
-## 대하여
-
-안녕하세요. 스치입니다.
+## 스치에 대하여
 
 컴퓨터로 사람과 세상의 작동 방식을 관찰하고, 그것을 새로운 형태로 만들어 보는 일에 관심이 있습니다.
 소프트웨어와 인공지능, 인터페이스와 사회적 컴퓨팅을 중심으로 공부하고 있으며, 사람이 컴퓨터를 어떻게
@@ -29,8 +27,10 @@ title = '블로그'
 이곳에는 그렇게 공부하고 만들면서 발견한 것들과, 세상을 보다가 문득 궁금해진 것들을 기록합니다.
 
 - 친구들:
-  - [blog.dacordia.com](https://blog.dacordia.com)
-  - [b.halv.kr](https://b.halv.kr)
+  - [다코](https://me.dacordia.com/)의 [blog.dacordia.com](https://blog.dacordia.com)
+  - [삼쩌모](https://halv.kr)의 [b.halv.kr](https://b.halv.kr)
+
+더 자세한 활동에 대해서는 [CV](/2026/09/cv)를 참고하시기 바랍니다.
 
 ### 장비 목록
 
