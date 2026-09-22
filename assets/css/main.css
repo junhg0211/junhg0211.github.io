@@ -37,9 +37,11 @@
   color-scheme: dark;
 }
 
-:not(:is(pre)) > code {
+code {
   font-family: "Anonymous Pro", monospace;
   font-size: 0.8rem;
+}
+:not(:is(pre)) > code {
   background-color: var(--dark-grey);
   color: var(--white);
   padding: 2px 4px;
