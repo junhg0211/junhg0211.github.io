@@ -75,6 +75,9 @@
     for (let i = r - 1; i >= 0; i--) {
       const rowCells = rows[i].cells;
       // 숨겨지지 않은 정상 셀을 만날 때까지 탐색
+      if (rowCells[c] && rowCells[c].textContent.trim() === "<") {
+        return findTargetCellLeft(rowCells, c);
+      }
       if (rowCells[c] && rowCells[c].style.display !== "none") {
         return rowCells[c];
       }
