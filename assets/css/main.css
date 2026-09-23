@@ -283,6 +283,21 @@ del:hover {
   text-decoration: none;
 }
 
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+thead,
+tbody {
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+}
+td,
+th {
+  padding: 4px 8px;
+}
+
 #TableOfContents {
   display: inline-block;
 }
