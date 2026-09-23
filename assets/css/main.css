@@ -216,17 +216,14 @@ ul:not(:last-child) {
   padding-bottom: 8px;
 }
 
-ol {
-  list-style-type: cjk-decimal;
-}
 ol ol {
-  list-style-type: cjk-heavenly-stem;
+  list-style-type: lower-alpha;
 }
 ol ol ol {
-  list-style-type: cjk-earthly-branch;
+  list-style-type: lower-roman;
 }
 ol ol ol ol {
-  list-style-type: cjk-ideographic;
+  list-style-type: decimal;
 }
 
 blockquote {
