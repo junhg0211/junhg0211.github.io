@@ -24,19 +24,40 @@ content:
         label: 제목
         type: string
         required: true
-
+    
       - name: date
         label: 날짜
         type: date
         required: true
-
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+    
       - name: categories
         label: 카테고리
         type: string
         list: true
-        required: false
-
+        default:
+          - 일기
+    
+      - name: draft
+        label: 초안
+        type: boolean
+        default: true
+    
+      - name: build
+        label: 빌드 설정
+        type: object
+        fields:
+          - name: list
+            label: 목록 표시
+            type: select
+            default: never
+            options:
+              values:
+                - never
+                - always
+    
       - name: body
         label: 본문
         type: rich-text
-        required: true
