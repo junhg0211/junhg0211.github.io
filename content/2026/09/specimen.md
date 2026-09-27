@@ -7,6 +7,7 @@ draft: false
 build:
   list: always
 ---
+
 {{< toc >}}
 
 견본 글입니다. 이 글을 통해서 마크다운의 여러가지 기능이 어떻게 렌더되는지 확인하고, 또한 블로그의
@@ -113,12 +114,12 @@ if __name__ == '__main__':
 
 $$f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos \frac{\pi n}{p}x + b_n \sin \frac{\pi n}{p}x\right)$$
 
-Also, **language varies** in this blog post.[^1] *For example,* we can use ~~English~~ to provide
-`additional context` or ***explanations.*** This allows for [a more diverse audience](/) to engage
+Also, **language varies** in this blog post.[^1] _For example,_ we can use ~~English~~ to provide
+`additional context` or **_explanations._** This allows for [a more diverse audience](/) to engage
 with the content and understand the message being conveyed.
 
 [^1]:
-    Läie, 2026, "Markdown Features in Blogging," *Journal of Digital Communication*, 12(3), pp.
+    Läie, 2026, "Markdown Features in Blogging," _Journal of Digital Communication_, 12(3), pp.
     45-67.
 
 $$\lim_{x \to \infty} \sum_{n=1}^{\infty} f\left(a + \frac{b-a}{n} k\right) \frac{b-a}{n} = \int_a^b f(x)dx$$
@@ -130,21 +131,21 @@ $$\lim_{x \to \infty} \sum_{n=1}^{\infty} f\left(a + \frac{b-a}{n} k\right) \fra
   - 하이픈 앞에 공백을 넣으면 하위 항목으로 인식됩니다.
     - 하위 항목은 들여쓰기를 통해 표현할 수 있습니다.
       - 하위 항목은 여러 단계로 중첩될 수 있으며, 각 단계마다 들여쓰기를 통해 구조를 명확히 할 수
-      있습니다.
-        - 하위 항목은 필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
         있습니다.
+        - 하위 항목은 필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
+          있습니다.
   1. 어떤 항목은 다른 항목과 구분하기 위해 번호를 붙일 수 있습니다.
 
 1. [x] 여기에서는 순서가 있는 리스트를 사용하고 있습니다.
 2. [ ] 이 리스트는 숫자와 점(.)을 사용하여 각 항목의 순서를 나타냅니다.
-  1. 숫자와 점 앞에 공백을 넣으면 하위 항목으로 인식됩니다.
-    1. 하위 항목은 들여쓰기를 통해 표현할 수 있으며, 각 단계마다 들여쓰기를 통해 구조를 명확히 할
-    
-      수 있습니다.
-      1. 하위 항목은 필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
-      
-        있습니다.
-         필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
+3. 숫자와 점 앞에 공백을 넣으면 하위 항목으로 인식됩니다.
+4. 하위 항목은 들여쓰기를 통해 표현할 수 있으며, 각 단계마다 들여쓰기를 통해 구조를 명확히 할
+
+   수 있습니다.
+
+5. 하위 항목은 필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
+
+   있습니다. 필요에 따라 더 많은 내용을 포함할 수 있으며, 각 항목은 독립적으로 작성될 수
 
 또한, 마크다운에서는 `mermaid`를 사용하여 다이어그램을 그릴 수 있습니다. 예를 들어, 다음과 같이
 간단한 순서도를 작성할 수 있습니다.
@@ -159,13 +160,11 @@ graph TD;
 
 또는, 표를 작성할 수도 있습니다. 예를 들어, 다음과 같이 간단한 표를 작성할 수 있습니다.
 
-
-| 헤더 1 | 헤더 2 | 헤더 3 |
-| ------ | ----- | --------- |
-| 가운데 정렬 | 왼쪽 정렬 | 오른쪽 정렬 |
-| 합체 | < | 셀 안에서 줄바꿈 |
-| ^ | ^ | 안녕 |
-
+| 헤더 1      | 헤더 2    | 헤더 3           |
+| ----------- | --------- | ---------------- |
+| 가운데 정렬 | 왼쪽 정렬 | 오른쪽 정렬      |
+| 합체        | <         | 셀 안에서 줄바꿈 |
+| ^           | ^         | 안녕             |
 
 ### 이 블로그에서만 사용할 수 있는 기능
 
