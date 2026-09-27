@@ -1,0 +1,38 @@
+media:
+  input: static/images
+  output: /images
+
+content:
+  - name: posts
+    label: 글
+    type: collection
+    path: content
+    view:
+      fields: [title, date, categories]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+
+      - name: date
+        label: 날짜
+        type: date
+        required: true
+
+      - name: categories
+        label: 카테고리
+        type: string
+        list: true
+        required: false
+
+      - name: body
+        label: 본문
+        type: rich-text
+        required: true
