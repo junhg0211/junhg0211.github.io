@@ -1,10 +1,12 @@
-+++
-date = '2026-09-20T19:31:00+09:00'
-title = 'PGI 3: 개인법무소'
-categories = ['개인일반색인', '개인법무소']
-draft = false
-[build]
-+++
+---
+build: {}
+categories:
+- 개인일반색인
+- 개인법무소
+date: '2026-09-20T19:31:00+09:00'
+draft: false
+title: 'PGI 3: 개인법무소'
+---
 
 **개인법무소** (個人法務所; Personal Legal Office, PLO)은 개인의 가치체계를 구성하는 개념과 규범을
 정리하는 [개인일반색인](/2026/09/pgi-1)의 갈래이다.

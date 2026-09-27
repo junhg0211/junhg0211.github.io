@@ -1,10 +1,12 @@
-+++
-date = '2026-09-20T19:30:58+09:00'
-title = 'PGI 2: 뇌내법원'
-categories = ['개인일반색인', '뇌내법원']
-draft = false
-[build]
-+++
+---
+build: {}
+categories:
+- 개인일반색인
+- 뇌내법원
+date: '2026-09-20T19:30:58+09:00'
+draft: false
+title: 'PGI 2: 뇌내법원'
+---
 
 **뇌내법원** (腦內法院; Intracranial Court, ICC)은 개인의 뇌내에서 발생하는 법적 판단과 규칙을
 정리하는 [개인일반색인](/2026/09/pgi-1)의 갈래이다.

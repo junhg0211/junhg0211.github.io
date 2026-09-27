@@ -1,8 +1,9 @@
-+++
-date = '2026-09-15T13:33:48+09:00'
-title = '전한결 (Hangyeol Jeon)'
-categories = ['북마크']
-+++
+---
+categories:
+- 북마크
+date: '2026-09-15T13:33:48+09:00'
+title: 전한결 (Hangyeol Jeon)
+---
 
 ## 개요
 

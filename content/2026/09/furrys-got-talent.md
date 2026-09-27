@@ -1,10 +1,11 @@
-+++
-date = '2026-09-22T10:28:20+09:00'
-title = '퍼리가왕전 출품 노래 가사 분석'
-categories = ['일기']
-draft = false
-[build]
-+++
+---
+build: {}
+categories:
+- 일기
+date: '2026-09-22T10:28:20+09:00'
+draft: false
+title: 퍼리가왕전 출품 노래 가사 분석
+---
 
 {{< toc >}}
 
