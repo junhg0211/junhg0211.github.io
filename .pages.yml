@@ -7,7 +7,10 @@ content:
     label: 글
     type: collection
     path: content
-    filename: "{fields.slug}.md"
+    filename:
+      template: "{primary}.md"
+      field: true
+    subfolders: true
     view:
       fields: [title, date, categories]
       primary: title
@@ -19,11 +22,6 @@ content:
     fields:
       - name: title
         label: 제목
-        type: string
-        required: true
-
-      - name: slug
-        label: 파일 이름
         type: string
         required: true
 
