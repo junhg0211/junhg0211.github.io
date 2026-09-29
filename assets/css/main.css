@@ -54,7 +54,7 @@ body {
   color: var(--color);
   font-size: 14px;
   line-height: 2;
-  counter-reset: h2 h3 h4 h5 h6;
+  counter-reset: h2-counter;
   transition:
     color 0.3s ease,
     background-color 0.3s ease;
@@ -120,50 +120,48 @@ h1 {
 }
 h2 {
   font-size: 1.4rem;
-  counter-reset: h3 h4 h5 h6;
+  counter-reset: h3-counter;
 }
 h2::before {
-  counter-reset: h3 h4 h5 h6;
-  counter-increment: h2;
-  content: counter(h2) ". ";
+  counter-increment: h2-counter;
+  content: counter(h2-counter) ". ";
   color: var(--accent);
 }
 h3 {
   font-size: 1.3rem;
-  counter-reset: h4 h5 h6;
+  counter-reset: h4-counter;
 }
 h3::before {
-  counter-reset: h4 h5 h6;
-  counter-increment: h3;
-  content: counter(h2) "." counter(h3) ". ";
+  counter-increment: h3-counter;
+  content: counter(h2-counter) "." counter(h3-counter) ". ";
   color: var(--accent);
 }
 h4 {
   font-size: 1.2rem;
-  counter-reset: h5 h6;
+  counter-reset: h5-counter;
 }
 h4::before {
-  counter-reset: h5 h6;
-  counter-increment: h4;
-  content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+  counter-increment: h4-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
   color: var(--accent);
 }
 h5 {
   font-size: 1.1rem;
-  counter-reset: h6;
+  counter-reset: h6-counter;
 }
 h5::before {
-  counter-reset: h6;
-  counter-increment: h5;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+  counter-increment: h5-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "."
+    counter(h5-counter) ". ";
   color: var(--accent);
 }
 h6 {
   font-size: 1rem;
 }
 h6::before {
-  counter-increment: h6;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+  counter-increment: h6-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "."
+    counter(h5-counter) "." counter(h6-counter) ". ";
   color: var(--accent);
 }
 h1,
