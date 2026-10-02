@@ -33,6 +33,7 @@ title: 블로그
 - **친구들:**
   - [다코](https://me.dacordia.com/)의 [blog.dacordia.com](https://blog.dacordia.com)
   - [삼쩌모](https://halv.kr)의 [b.halv.kr](https://b.halv.kr)
+  - 아르고의 [largonavis88.github.io](https://largonavis88.github.io)
 
 더 자세한 활동에 대해서는 [CV](/2026/09/cv)를 참고하시기 바랍니다.
 
