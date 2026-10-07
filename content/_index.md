@@ -17,7 +17,7 @@ title: 블로그
 ## 스치에 대하여
 
 - **이름:**
-  - 스치 (Läie Zasoque Zenol Sthîe, diseùie Haizn)
+  - 스치 (LÄIE Zasoque Zenol Sthîe, d.s. Haizn)
   - [토쿠 (TOKU, 徒酷)](https://toku.shtelo.org)
 
 컴퓨터로 사람과 세상의 작동 방식을 관찰하고, 그것을 새로운 형태로 만들어 보는 일에 관심이 있습니다.
