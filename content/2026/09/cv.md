@@ -10,7 +10,7 @@ title: 전한결 (Hangyeol Jeon)
 > 전한결 (Hangyeol Jeon)
 
 - 컴퓨터소프트웨어공학 학사 예정, 순천향대학교
-- 이메일 [junhg0211@gmail.com](mailto:junhg0211@gmail.com)
+- 이메일 [jeonhangyeol@zasoque.org](mailto:jeonhangyeol@zasoque.org)
 - 깃허브 [junhg0211](https://github.com/junhg0211)
 
 상호작용 시스템과 개발자 도구를 구축하는 데 중점을 둔 소프트웨어 공학부생입니다. TypeScript,
