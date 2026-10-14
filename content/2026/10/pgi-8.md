@@ -3,13 +3,14 @@ date: "2026-10-14T15:17:16+09:00"
 title: "PGI 8: 자소크 제2제국 인터넷 자치령"
 categories:
   - 개인일반색인
+  - 제2제국 인터넷 자치령
 draft: false
 build:
   list: always
 ---
 
-제2제국 인터넷 자치령(J'Interneté Hasolynnarinatiofashasìe Tainatîe Litia)은 자소크 제2제국의 인터넷
-자치령입니다. 이 자치령은 제2제국의 법률과 규정을 준수하면서도, 인터넷과 관련된 정책과 규제를
+제2제국 인터넷 자치령(J'Interneté Hasolynnarinatiofashasìe Tainatîe Litia, IHTL)은 자소크 제2제국의
+인터넷 자치령입니다. 이 자치령은 제2제국의 법률과 규정을 준수하면서도, 인터넷과 관련된 정책과 규제를
 독립적으로 관리할 수 있는 권한을 가지고 있습니다. 자치령은 제2제국의 타이친으로부터 행정적인
 자치권을 부여받아 운영되며, 타이친으로부터 부여받은 권한의 범위 안에서만 자치권을 행사할 수 있음을
 알려드립니다.
