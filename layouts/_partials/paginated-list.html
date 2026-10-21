@@ -15,15 +15,45 @@
   {{ end }}
 </div>
 {{ if gt $paginator.TotalPages 1 }}
+{{ $pageWindowSize := 10 }}
+{{ $windowStart := add (mul (div (sub $paginator.PageNumber 1) $pageWindowSize) $pageWindowSize) 1 }}
+{{ $windowEnd := int (math.Min $paginator.TotalPages (add $windowStart (sub $pageWindowSize 1))) }}
 <nav
   aria-label="페이지 이동"
   style="display: flex; justify-content: center; gap: 8px; margin-top: 16px"
 >
-  {{ with $paginator.Prev }}<a href="{{ .URL }}#all-posts" aria-label="이전 페이지">←</a>{{ end }} {{ range
-  $paginator.Pagers }} {{ if eq . $paginator }}<strong aria-current="page"
-    >{{ .PageNumber }}</strong
-  >
-  {{ else }}<a href="{{ .URL }}#all-posts">{{ .PageNumber }}</a>{{ end }} {{ end }} {{ with $paginator.Next
-  }}<a href="{{ .URL }}#all-posts" aria-label="다음 페이지">→</a>{{ end }}
+  {{ if gt $windowStart 1 }}
+    {{ with index $paginator.Pagers (sub $windowStart 2) }}
+      <a href="{{ .URL }}#all-posts" aria-label="이전 페이지 묶음">↞</a>
+    {{ end }}
+  {{ else }}
+    <span aria-disabled="true" style="color: var(--grey)">↞</span>
+  {{ end }}
+  {{ with $paginator.Prev }}
+    <a href="{{ .URL }}#all-posts" aria-label="이전 페이지">←</a>
+  {{ else }}
+    <span aria-disabled="true" style="color: var(--grey)">←</span>
+  {{ end }}
+  {{ range $paginator.Pagers }}
+    {{ if and (ge .PageNumber $windowStart) (le .PageNumber $windowEnd) }}
+      {{ if eq . $paginator }}
+        <strong aria-current="page">{{ .PageNumber }}</strong>
+      {{ else }}
+        <a href="{{ .URL }}#all-posts">{{ .PageNumber }}</a>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $paginator.Next }}
+    <a href="{{ .URL }}#all-posts" aria-label="다음 페이지">→</a>
+  {{ else }}
+    <span aria-disabled="true" style="color: var(--grey)">→</span>
+  {{ end }}
+  {{ if lt $windowEnd $paginator.TotalPages }}
+    {{ with index $paginator.Pagers $windowEnd }}
+      <a href="{{ .URL }}#all-posts" aria-label="다음 페이지 묶음">↠</a>
+    {{ end }}
+  {{ else }}
+    <span aria-disabled="true" style="color: var(--grey)">↠</span>
+  {{ end }}
 </nav>
 {{ end }}
