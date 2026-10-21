@@ -4,6 +4,44 @@
 
   const getQuery = () => new URLSearchParams(window.location.search).get("q") || "";
 
+  const appendHighlightedText = (element, value, terms) => {
+    const text = String(value || "");
+    const comparableText = text.toLocaleLowerCase("ko-KR");
+    const ranges = [];
+
+    for (const term of [...new Set(terms)].sort((left, right) => right.length - left.length)) {
+      let start = comparableText.indexOf(term);
+      while (start !== -1) {
+        ranges.push([start, start + term.length]);
+        start = comparableText.indexOf(term, start + term.length);
+      }
+    }
+
+    ranges.sort((left, right) => left[0] - right[0] || right[1] - left[1]);
+    const mergedRanges = ranges.reduce((merged, range) => {
+      const previous = merged.at(-1);
+      if (previous && range[0] <= previous[1]) {
+        previous[1] = Math.max(previous[1], range[1]);
+      } else {
+        merged.push(range);
+      }
+      return merged;
+    }, []);
+
+    let cursor = 0;
+    for (const [start, end] of mergedRanges) {
+      if (cursor < start) element.append(document.createTextNode(text.slice(cursor, start)));
+      const match = document.createElement("span");
+      match.className = "search-match";
+      match.textContent = text.slice(start, end);
+      element.append(match);
+      cursor = end;
+    }
+    if (cursor < text.length || !mergedRanges.length) {
+      element.append(document.createTextNode(text.slice(cursor)));
+    }
+  };
+
   const getSnippet = (item, terms) => {
     const text = item.summary || item.content || "";
     const normalizedText = normalize(text);
@@ -37,7 +75,7 @@
     return value;
   };
 
-  const makeMeta = (item) => {
+  const makeMeta = (item, terms) => {
     const meta = document.createElement("p");
     meta.className = "search-result-meta";
     const parts = [];
@@ -45,7 +83,7 @@
     if (item.date) parts.push(item.date);
     if (item.categories?.length) parts.push(item.categories.join(" · "));
     if (item.tags?.length) parts.push(item.tags.map((tag) => `#${tag}`).join(" "));
-    meta.textContent = parts.join(" — ");
+    appendHighlightedText(meta, parts.join(" — "), terms);
     return meta;
   };
 
@@ -56,14 +94,14 @@
     const heading = document.createElement("h2");
     const link = document.createElement("a");
     link.href = item.url;
-    link.textContent = item.title;
+    appendHighlightedText(link, item.title, terms);
     heading.append(link);
 
     const summary = document.createElement("p");
     summary.className = "search-result-summary";
-    summary.textContent = getSnippet(item, terms);
+    appendHighlightedText(summary, getSnippet(item, terms), terms);
 
-    article.append(heading, makeMeta(item), summary);
+    article.append(heading, makeMeta(item, terms), summary);
     return article;
   };
 
@@ -88,6 +126,7 @@
       const items = await response.json();
       const normalizedQuery = normalize(query);
       const terms = normalizedQuery.split(" ").filter(Boolean);
+      const highlightTerms = [...new Set([normalizedQuery, ...terms])];
       const matches = items
         .filter((item) => {
           const searchable = normalize(
@@ -100,7 +139,7 @@
       status.textContent = matches.length
         ? `“${query}” 검색 결과 ${matches.length}개`
         : `“${query}”와 일치하는 글이 없습니다.`;
-      results.replaceChildren(...matches.map((item) => makeResult(item, terms)));
+      results.replaceChildren(...matches.map((item) => makeResult(item, highlightTerms)));
     } catch {
       status.textContent = "검색 색인을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.";
     }
