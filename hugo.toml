@@ -4,13 +4,6 @@ timeZone = 'Asia/Seoul'
 enableEmoji = true
 title = 'Zasoque'
 
-[outputFormats]
-  [outputFormats.SearchIndex]
-    mediaType = 'application/json'
-    baseName = 'index'
-    isPlainText = true
-    notAlternative = true
-
 [module]
   [module.mounts]
     source = 'content'
