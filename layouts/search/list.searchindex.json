@@ -1,0 +1,17 @@
+{{- $pages := slice -}}
+{{- range site.RegularPages -}}
+  {{- if not .Params.searchExclude -}}
+    {{- $summary := .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+    {{- $content := .Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+    {{- $pages = $pages | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "date" (.Date.Format "2006-01-02")
+      "categories" (default (slice) .Params.categories)
+      "tags" (default (slice) .Params.tags)
+      "summary" $summary
+      "content" $content
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages | jsonify -}}

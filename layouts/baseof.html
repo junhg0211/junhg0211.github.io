@@ -47,6 +47,19 @@
         </div>
       </header>
       <main>{{ block "main" . }}{{ end }}</main>
+      <div class="site-search">
+        <form action="{{ "search/" | relURL }}" method="get" role="search">
+          <label class="visually-hidden" for="site-search-query">글 검색</label>
+          <input
+            id="site-search-query"
+            name="q"
+            type="search"
+            placeholder="글 검색"
+            autocomplete="off"
+          />
+          <button type="submit">검색</button>
+        </form>
+      </div>
       <footer style="margin-top: 24px; font-size: 11px; color: var(--grey)">
         <hr />
         <p><a href="/">메인 페이지로</a></p>
