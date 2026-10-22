@@ -43,17 +43,18 @@
   };
 
   const getSnippet = (item, terms) => {
-    const text = item.summary || item.content || "";
-    const normalizedText = normalize(text);
-    const matchIndex = terms
-      .map((term) => normalizedText.indexOf(term))
-      .find((index) => index >= 0);
+    const content = item.content || "";
+    const normalizedContent = normalize(content);
+    const matchIndexes = terms
+      .map((term) => normalizedContent.indexOf(term))
+      .filter((index) => index >= 0);
 
-    if (matchIndex === undefined) return text;
+    if (!matchIndexes.length) return item.summary || content;
 
+    const matchIndex = Math.min(...matchIndexes);
     const start = Math.max(0, matchIndex - 70);
-    const end = Math.min(text.length, matchIndex + 150);
-    return `${start > 0 ? "…" : ""}${text.slice(start, end)}${end < text.length ? "…" : ""}`;
+    const end = Math.min(content.length, matchIndex + 150);
+    return `${start > 0 ? "…" : ""}${content.slice(start, end)}${end < content.length ? "…" : ""}`;
   };
 
   const score = (item, query, terms) => {
