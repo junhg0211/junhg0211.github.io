@@ -1,4 +1,10 @@
 <figure>
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" />
+  {{- $source := strings.TrimPrefix "/" .Destination -}}
+  {{- with resources.Get $source -}}
+    {{- $image := .Fit "1200x600 webp q85" -}}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $.Text }}" title="{{ $.Title }}" loading="lazy" />
+  {{- else -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" />
+  {{- end }}
   <figcaption>{{ .Text }}</figcaption>
 </figure>
