@@ -324,6 +324,7 @@ blockquote {
 blockquote p {
   text-indent: 0;
   text-align: center;
+  text-wrap: pretty;
 }
 
 footer a {
