@@ -3,6 +3,7 @@ date: "2026-10-26T12:21:04+09:00"
 title: "엘리베이터를 거꾸로 타는 사람의 윤리학"
 categories:
   - 일기
+  - ChatGPT
 draft: false
 build:
   list: always
