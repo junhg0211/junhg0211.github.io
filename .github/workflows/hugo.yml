@@ -1,4 +1,5 @@
 name: Build and deploy
+
 on:
   push:
     branches:
@@ -21,6 +22,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      new_pages: ${{ steps.new_pages.outputs.pages }}
     env:
       # Define tool versions
       DART_SASS_VERSION: 1.104.0
@@ -125,6 +128,75 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/.cache/hugo"
 
+      - name: Identify newly published pages
+        id: new_pages
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+
+          # A first-ever push has no comparable commit, so it deliberately sends no alerts.
+          if [[ "$BEFORE" =~ ^0+$ ]]; then
+            echo 'pages=[]' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          previous_site="${RUNNER_TEMP}/previous-site"
+          git worktree add --detach "$previous_site" "$BEFORE"
+          trap 'git worktree remove --force "$previous_site"' EXIT
+
+          if [[ -f "$previous_site/.gitmodules" ]]; then
+            git -C "$previous_site" submodule update --init --recursive
+          fi
+
+          # Use one clock for both revisions so a date boundary cannot create a false difference.
+          clock="$(date --iso-8601=seconds)"
+          hugo list published --clock "$clock" > "${RUNNER_TEMP}/current-pages.csv"
+          (
+            cd "$previous_site"
+            hugo list published --clock "$clock"
+          ) > "${RUNNER_TEMP}/previous-pages.csv"
+
+          git diff --name-only "$BEFORE" "$GITHUB_SHA" -- content > "${RUNNER_TEMP}/changed-content.txt"
+
+          python3 - \
+            "${RUNNER_TEMP}/current-pages.csv" \
+            "${RUNNER_TEMP}/previous-pages.csv" \
+            "${RUNNER_TEMP}/changed-content.txt" \
+            > "${RUNNER_TEMP}/new-pages.json" <<'PY'
+          import csv
+          import json
+          import re
+          import sys
+
+          current_csv, previous_csv, changed_file = sys.argv[1:]
+
+          def read_pages(filename):
+              with open(filename, newline='', encoding='utf-8') as handle:
+                  return {row['path']: row for row in csv.DictReader(handle)}
+
+          current = read_pages(current_csv)
+          previous = read_pages(previous_csv)
+          with open(changed_file, encoding='utf-8') as handle:
+              changed = {line.strip() for line in handle if line.strip()}
+
+          post_path = re.compile(r'content/\d{4}/\d{2}/.+\.md')
+          newly_published = []
+          for path in sorted(changed):
+              page = current.get(path)
+              if page and path not in previous and post_path.fullmatch(path):
+                  newly_published.append({
+                      'path': path,
+                      'title': page['title'],
+                      'url': page['permalink'],
+                  })
+
+          print(json.dumps(newly_published, ensure_ascii=False, separators=(',', ':')))
+          PY
+
+          echo "pages=$(<"${RUNNER_TEMP}/new-pages.json")" >> "$GITHUB_OUTPUT"
+
       - name: Cache save
         uses: actions/cache/save@v6
         with:
@@ -147,3 +219,57 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [build, deploy]
+    if: >-
+      github.event_name == 'push' &&
+      github.run_attempt == '1' &&
+      needs.deploy.result == 'success' &&
+      needs.build.outputs.new_pages != '' &&
+      needs.build.outputs.new_pages != '[]'
+    steps:
+      - name: Send newly published posts to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          NEW_PAGES: ${{ needs.build.outputs.new_pages }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.error
+          import urllib.request
+
+          webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
+          if not webhook_url:
+              raise SystemExit('DISCORD_WEBHOOK_URL is not configured.')
+
+          pages = json.loads(os.environ['NEW_PAGES'])
+          for page in pages:
+              payload = json.dumps({
+                  'embeds': [{
+                      'title': page['title'],
+                      'url': page['url'],
+                      'description': '새 글이 게시되었습니다.',
+                  }]
+              }, ensure_ascii=False).encode('utf-8')
+
+              for attempt in range(3):
+                  request = urllib.request.Request(
+                      webhook_url,
+                      data=payload,
+                      headers={'Content-Type': 'application/json'},
+                      method='POST',
+                  )
+                  try:
+                      with urllib.request.urlopen(request, timeout=20) as response:
+                          if response.status not in (200, 204):
+                              raise RuntimeError(f'Discord returned HTTP {response.status}.')
+                      break
+                  except (urllib.error.URLError, urllib.error.HTTPError, RuntimeError):
+                      if attempt == 2:
+                          raise
+                      time.sleep(2 ** attempt)
+          PY
