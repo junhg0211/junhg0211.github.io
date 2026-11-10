@@ -3,6 +3,7 @@ date: "2026-11-10T19:40:49+09:00"
 title: "툴파가 뭔가요"
 categories:
   - 일기
+  - 툴파
 draft: false
 build:
   list: always
