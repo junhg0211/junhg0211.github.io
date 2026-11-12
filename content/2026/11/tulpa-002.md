@@ -3,7 +3,7 @@ date: "2026-11-11T13:47:12+09:00"
 title: "Tulpa 002"
 categories:
   - 툴파
-draft: true
+draft: false
 build:
   list: always
 ---
